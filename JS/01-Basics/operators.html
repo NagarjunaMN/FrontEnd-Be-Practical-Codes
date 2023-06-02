@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+    <style>
+        
+        table,td,th{
+            margin: 20px;
+            background-color: lightgray;
+            border: 2px solid grey;
+            padding: 10px;
+            border-collapse: collapse;
+            text-align: center;
+            
+        }
+        
+        div>p{
+            margin: 10px;
+            background-color: lightblue;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Assignment..!</h1>
+    
+    <hr>
+      <table>
+        <tr>
+            <th><label for="">Enter First Number :</label></th>
+            <td><input type="number" name="firstNumber" id="firstNumber" placeholder="First Number"> </td>
+        </tr>
+        <tr>
+            <th><label for="">Enter Second Number :</label></th>
+            <td><input type="number" name="secondNumber" id="secondNumber" placeholder="Second Number"> </td>
+        </tr>
+        <tr>
+            <td><button type="button" id="btn-cnd">Submit</button></td>
+            <td><button type="button" id="btn-cnl">Clear</button></td>
+        </tr>
+    </table>
+    </center>
+    <div>
+        <p>The Addition Value is : <span id="sum"></span></p>
+        <p>The Subtraction Value is : <span id="sub"></span></p>
+        <p>The Multiplication Value is : <span id="mul"></span></p>
+        <p>The Division Value is : <span id="div"></span></p>
+        <p>The Modulus Value is : <span id="mod"></span></p>
+    </div>
+
+
+    <script>
+        function checkCondition() {
+            let firstNumber = +document.getElementById('firstNumber').value
+            let secondNumber = +document.getElementById('secondNumber').value
+            
+            let sum=firstNumber+secondNumber;
+            document.getElementById('sum').innerHTML = sum;
+
+            let sub=firstNumber-secondNumber;
+            document.getElementById('sub').innerHTML = sub;
+
+            let mul=firstNumber*secondNumber;
+            document.getElementById('mul').innerHTML = mul;
+
+            let div=firstNumber/secondNumber;
+            document.getElementById('div').innerHTML = div;
+
+            let mod=firstNumber%secondNumber;
+            document.getElementById('mod').innerHTML = mod;
+            
+
+        }
+         
+
+        document.getElementById('btn-cnd').onclick=checkCondition;
+       
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Static method </h3>
+    <p>normal methods you can use instancce to call the methods,static methods we have to use class name to call the method </p>
+
+    <script>
+        class Course {
+            
+            constructor(title,dur){
+                document.write("constructor called")
+                this.title =title;
+                this.duration =dur;
+            }
+            //static method
+            static print(val){
+                //will not allow this pointer
+                //staticfunction call possible only by class name
+                document.write(`<h3> This is static Method </h3>`)
+                document.write(`<h3> Property title =  ${this.title}</h3>`)
+                document.write(`<h3> Parameter title =  ${val}</h3>`)
+            }
+            // non-static
+            courseInfo(){
+                document.write(`<h3>  ${this.title} ${this.duration} </h3>`)
+            }
+        }
+
+        Course.print("Be-practical") //parameterized static method call
+
+        let x = new Course("Javascript","1month")
+        x.courseInfo() //method call with respect to instance
+        
+    </script>
+</body>
+</html>

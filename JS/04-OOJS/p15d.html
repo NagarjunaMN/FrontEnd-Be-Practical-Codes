@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Parameterized Class  to check even or odd number </h3>
+    <form action="" onsubmit="submitHandler(event)">
+        <div class="input">
+            <label for="num">Enter the Number</label>
+            <input type="number" name="num" id="num" required>
+        </div>
+        <div class="input">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <hr>
+    <div id="result"></div>
+
+    <script>
+
+        function submitHandler(event) {
+            event.preventDefault();
+            let num = Number(document.getElementById('num').value)
+            let n = new Check(num)
+            document.getElementById('result').innerHTML = `<h3>  submitted value ${num} is  ${n.calculate()} </h3>`;
+        }
+
+
+        class Check {
+            
+            constructor(x){
+                this.a = x;
+                
+            }
+
+            calculate(){
+                return this.a%2==0?"even":"odd"
+            }
+        }
+
+        let s = new Check (12);
+        let s1 = new Check (43);
+        console.log("s =>",s)
+        console.log("s1 =>",s1)
+        document.write(`<h3>  even or odd s = ${s.calculate()} </h3>`)
+        document.write(`<h3>  even or odd s1 = ${s1.calculate()} </h3>`)
+        
+    </script>
+</body>
+</html>

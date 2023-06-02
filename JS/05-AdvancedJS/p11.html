@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous</title>
+</head>
+<body>
+    <center>
+        <h1>ASYNCHRONOUS FUNCTION</h1>
+        <P>External js function execution using call back(Asynchronous)</P>
+    </center>
+    <hr>
+    <p>Asynchronous code allows the program to be executed immediately </p>
+    <p>Asynchronous programming allows you to perform multiple requests simultaneously and complete more tasks faster</p>
+
+    <hr>
+    <script src="assests/js/ext.js"></script>  
+<!-- the above script tag stays till the program is run and is open thus it makes the page load slower and takes more memory while the below script tag starts and once the execution of the function is completed it stops the script this saving memory -->
+    <script>
+        function loadScript(path,callback) {
+            let script = document.createElement("script");
+            script.src = path;
+            document.body.append(script);
+            // script.onload = () => callback()
+            script.onload = () => callback(script) //ganesh
+        }
+        // loadScript("assests/js/ext.js", () =>{sum(10,20);})
+        loadScript("assests/js/ext.js", (script) =>{
+            // call 
+            sum(10,20);
+            mul(12,44);
+        }) //ganesh
+        // setTimeout("loadScript('assests/js/ext.js', () =>{sum(10,20);})",2000)
+    </script>
+</body>
+</html>

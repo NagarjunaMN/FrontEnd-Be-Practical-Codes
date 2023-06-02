@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-EVENT</title>
+    <style>
+        h4{
+            padding: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>MEDIA EVENT</h1>
+    </center>
+    <hr>
+
+    <h3 id="msg"></h3>
+    <video src="assests/Media/big_buck_bunny_720p_1mb.mp4" height="200px" controls muted  onplay="playHan()" onpause="pauseHan()" onvolumechange="volHan()" onseeking="seekHan()"></video>
+
+    <script>
+        var msg = document.getElementById('msg')
+        function playHan(){
+            msg.innerHTML = "Started playing Video";
+            msg.style.color = "green"
+        }
+        function pauseHan(){
+            msg.innerHTML = "Video Paused";
+            msg.style.color = "crimson"
+        }
+        function volHan(){
+            msg.innerHTML = "Changing Volume";
+            msg.style.color = "deepskyblue"
+        }
+        function seekHan(){
+            msg.innerHTML = "Video timing is changing";
+            msg.style.color = "deeppink"
+        }
+    </script>
+</body>
+</html>

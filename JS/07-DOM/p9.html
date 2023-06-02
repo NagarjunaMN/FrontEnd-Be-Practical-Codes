@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<style>
+    .highlight{
+        background-color: dimgray;
+    }
+</style>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <div class="disabled" id="info">Something Very Important..!</div>
+    <script>
+    let elem = document.getElementById("info");
+
+    elem.className = "note";
+    elem.className += "highlight";
+
+    elem.classList.add("hide")// Adds a new class
+    // elem.classList.add("note","highlight","visible") //adds multiple classes
+    
+    // elem.classList.remove("hide") //Removes a class
+    // elem.classList.remove("disabled","note") //Removes multiple classes
+    // elem.classList.toggle("visible") //If the class exists then it'll remove it ,if not it'll add it.
+
+    </script>
+</body>
+</html>

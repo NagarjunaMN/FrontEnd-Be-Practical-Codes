@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h3>click and dblclick</h3>
+
+    <button id="single">Click</button>
+    <button id="double">Double Click</button>
+
+    <script>
+        $(document).ready(function(){
+            // statements
+            // var x = 12;
+            // $x = 12;
+            /* 
+                selector.event(callback function)
+            */
+            $('#single').click(function () {
+                alert("Single click event");
+            });
+
+            $('#double').dblclick(function () {
+                alert("double clicked");
+            });
+        });
+    </script>
+</body>
+</html>

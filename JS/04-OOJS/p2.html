@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    <center>
+        <h1>By creating instance of object directly (using new keyword)</h1>
+    </center>
+    <hr>
+    <strong>SYNTAX : </strong>
+    <pre>
+        let objName = new ConstructorMethod();
+    </pre>
+
+    <script>
+        let empDetails = new Object();
+        document.write(empDetails)
+        document.write(typeof(empDetails))
+
+        empDetails.firstName = "Nagarjuna";
+        empDetails.lastName = "Mondru";
+        empDetails.fullName = function() {return this.firstName+' '+this.lastName};
+        empDetails.mobile = [7894561320,4667891320]
+        empDetails.pincode = 560075
+        empDetails.address = new Object();
+        empDetails.address.local = "Bengaluru";
+        empDetails.address.per = "Guntur";
+        empDetails.photo = 'assests/Images/Image1.jpg';
+
+        document.write(empDetails.firstName+"<br>")
+        document.write(empDetails.lastName+"<br>")
+        document.write(empDetails.fullName()+"<br><br>")
+
+        document.write(`<table border = 1 cellpadding = 20px>
+            <tr>
+                <th>First Name</th>  
+                <th>Last Name</th>
+                <th>Full Name</th>
+                <th>Mobile Number</th>
+                <th>Alt Mobile Number</th>
+                <th>Local Address</th>
+                <th>Per Address</th>
+                <th>Pincode</th>
+                <th>Emp Photo</th>
+                <th>Options</th>  
+            </tr>
+            <tr>
+                <td>${empDetails.firstName}</td>
+                <td>${empDetails.lastName}</td>
+                <td>${empDetails.fullName()}</td>
+                <td>${empDetails.mobile[0]}</td>
+                <td>${empDetails.mobile[1]}</td>
+                <td>${empDetails.address.local}</td>
+                <td>${empDetails.address.per}</td>
+                <td>${empDetails.pincode}</td>
+                <td><img src=${empDetails.photo} height = 90px></td>
+                <td><button>Edit</button>
+                <button>Delete</button></td>
+            </tr>
+            </table>`);
+
+    </script>
+    <hr>
+    <center>
+        <h1> By using an object constructor (using new keyword)</h1>
+    </center>
+
+    <script>
+        function studentInfo(firstName, lastName) {
+            document.write(`<h3>First Parameter value is : ${firstName} </h3>`)
+            document.write(`<h3>Second Parameter value is : ${lastName} </h3>`)
+
+            let fn,ln;
+            fn=firstName;
+            ln=lastName;
+            document.write(`<h3>First variable value is : ${fn} </h3>`)
+            document.write(`<h3>Second variable value is : ${ln} </h3>`)
+
+            let fname,lname; //internal property
+
+            this.fname = firstName; //external property
+            this.lname = lastName;
+            document.write(`<h3>First this variable value is : ${fname} </h3>`)
+            document.write(`<h3>Second variable value is : ${lname} </h3>`)
+            console.log(typeof(fname))
+
+
+        }
+
+        let studDetails = new studentInfo("HTML", "CSS")
+        console.log(studDetails)
+        document.write(`<h3>First variable value is : ${studDetails.fname} </h3>`)
+        document.write(`<h3>Second variable value is : ${studDetails.lname} </h3>`)
+
+    </script>
+</body>
+</html>

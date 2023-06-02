@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <style>
+
+        section{
+            width: 100%;
+            overflow-x: hidden;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+            grid-gap: 10px;
+            background-color: #3D2547;
+        }
+        article{
+            font-size: 18px;
+            padding: 10px;
+            color: white;
+            margin: 5px;
+            border-radius: 25px;
+            text-align: center;
+            transition: 1s;
+        }
+        article:hover{box-sizing: border-box; border-radius: 50%; overflow-x:hidden ;}
+        article:nth-child(even){background-color: #FBB2C3;}
+        article:nth-child(odd){background-color: #5BE0C3;}
+        article h4{color: orangered;}
+        article h5:last-child{color:crimson;}
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Albums..!</h1>
+    </center>
+    <hr>
+
+    <section id="block"></section>
+
+    <script>
+
+        fetch(`https://jsonplaceholder.typicode.com/todos`)
+        .then(response => response.json())
+        .then(res => {
+            console.log("res",res);
+            print(res)
+        })
+        .catch(err=> {console.log("Error : ",err.message)})
+
+        let blk = document.querySelector("#block");
+
+        function print(data) {
+            data.forEach(item => {
+                // Create an html tags
+                let article = document.createElement('article');
+                let title = document.createElement('h4');
+                let id = document.createElement('h5');
+                let userId = document.createElement('h5');
+                let completed = document.createElement('h5');
+                
+
+                // add text content
+                userId.textContent = "User Id : "+ item.userId;
+                id.textContent = "Id : "+ item.id;
+                title.textContent ="Title : "+ item.title;
+                completed.textContent ="Completed : "+ item.completed;
+                
+
+
+                // appending to main node
+                article.appendChild(title);
+                article.appendChild(id);
+                article.appendChild(userId);
+                article.appendChild(completed);
+                
+                blk.appendChild(article);
+            });
+        }
+
+
+    </script>
+</body>
+</html>

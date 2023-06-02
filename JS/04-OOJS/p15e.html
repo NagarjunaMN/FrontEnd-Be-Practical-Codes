@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Static method </h3>
+    <p>normal methods you can use instancce to call the methods,static methods we have to use class name to call the method </p>
+
+    <script>
+        class Person {
+            //properties and methods
+            constructor(){
+                document.write("Hi im a constructor")
+                this.name = "Mahesh";
+            }
+
+            static getName(na){
+                document.write(`<h3> Hi ${this.name} welcome to js</h3>`)
+                document.write(`<h3> Hi ${na} welcome to js</h3>`)
+
+            }
+        }
+
+        Person.getName("Raju")
+        Person.getName()
+        
+    </script>
+</body>
+</html>

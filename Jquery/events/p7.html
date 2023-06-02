@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h3>Change</h3>
+
+    <h3 id="out"></h3>
+
+    <form action="">
+        <label for="">Choose tech</label>
+        <select name="tech" id="tech">
+            <option value="null">Choose tech</option>
+            <option value="html">HTml</option>
+            <option value="css">css</option>
+            <option value="js">javascript</option>
+            <option value="jquery">jquery</option>
+            <option value="angular">Angular</option>
+        </select>
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            // statements
+            $('#tech').change(function () {
+                $x = $(this).val();
+                if ($x == "null") {
+                    $('#out').text(`select some value`);
+                }else{
+                $('#out').text(`${ $x } selected value`);
+            }
+            });
+        });
+    </script>
+</body>
+</html>

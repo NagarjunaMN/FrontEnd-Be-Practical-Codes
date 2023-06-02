@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <center>
+        <h1>Nested Objects</h1>
+    </center>
+    <hr>
+    <script>
+        let user = {
+            "name" : "Mahesh",
+            "account" : [
+                {
+                    bankId : 123,
+                    accNo : 234343,
+                    bName : "SBI",
+                    type : "sb"
+                },
+                {
+                    bankId : 243,
+                    accNo : 34355,
+                    bName : "Axis",
+                    type : "current"
+                }
+            ],
+
+            emp : {
+                Company : "XYZ pvt ltd",
+                Salary : "2.5 LPA",
+                designation : "Web Developer"
+            }
+        }
+
+        document.write(`<h3>Name is ${user.name}</h3>`);
+        document.write(`<hr>`);
+        user.account.forEach(function (item) {
+            document.write(`<h3>Bank Id is ${item.bankId}</h3>`);
+            document.write(`<h3>Bank account no is ${item.accNo}</h3>`);
+            document.write(`<h3>Bank name is ${item.bName}</h3>`);
+            document.write(`<h3>Account type is ${item.type}</h3>`);
+        });
+
+        // for (let i = 0; i < user.account.length; i++) {
+        //     document.write(`<h3>Bank Id = ${user.account[i].bankId}</h3>`);
+        //     document.write(`<h3>Bank account no = ${user.account[i].accNo}</h3>`);
+        //     document.write(`<h3>Bank name = ${user.account[i].bName}</h3>`);
+        //     document.write(`<h3>Account type = ${user.account[i].type}</h3>`);
+        // };
+        document.write(`<hr>`);
+        document.write(`<h3>Company = ${user.emp.Company}</h3>`);
+        console.log(`<h3>Salary = ${user[emp][Salary]}</h3>`);
+        document.write(`<h3>Designation = ${user[emp][designation]}</h3>`);
+
+    </script>
+</body>
+</html>

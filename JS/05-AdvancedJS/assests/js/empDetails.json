@@ -1,0 +1,11 @@
+{
+    "users":[{
+        "id":1,
+        "login_id":"vijay",
+        "fullname":"Vijay Kumar",
+        "avatar_url" : 
+    }]
+}
+jsonplaceholder.typicode.com/photos
+
+https://jsonplaceholder.typicode.com/photos

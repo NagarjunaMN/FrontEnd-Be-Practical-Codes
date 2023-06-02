@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Listener</title>
+</head>
+<body>
+    <center>
+        <h1>EVENT LISTENER</h1> 
+        <p>Adding Event-Listener for Different Event Type</p>
+    </center>
+    <hr>
+
+    <button type="button" id="myBtn">Click me</button>
+
+    <script>
+        // Selecting button element
+        let btn1 = document.getElementById('myBtn');
+        
+        // defining custom function
+        function sayHello() {
+            alert("Hi, How are you doing?");
+        }
+        // sayHello()
+
+        function setHoverColor() {
+            btn1.style.background = "Yellow"
+        }
+        // setHoverColor();
+        function setNormalColor() {
+            btn1.style.background = ''
+        }
+        // setNormalColor();
+        btn1.addEventListener('click', sayHello);
+        btn1.addEventListener('mouseover', setHoverColor);
+        btn1.addEventListener('mouseout', setNormalColor);
+
+    
+    </script>
+</body>
+</html>

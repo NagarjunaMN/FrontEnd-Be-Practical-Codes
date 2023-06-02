@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container>p{
+            /* outline: 2px solid gold;
+            border: 5px solid blue;
+            padding: 20px; */
+            /* margin: 20px; */
+            /* white-space: nowrap; */
+            /* width: 25%; */
+            /* height: 300px !important; */
+            /* overflow:scroll; */
+            /* overflow-x: hidden;
+            overflow-y:scroll ;
+            white-space: break-spaces;
+            white-space:pre;
+            white-space:nowrap;
+            white-space:pre-line; */
+            
+
+        }
+        /* .container>.second{
+                visibility: hidden;
+            }
+            .container>.third{
+                display: none  ;
+            }  */
+            .container>p{
+                border: 2px solid black;
+                margin: 20px;
+                padding: 20px;
+            }
+            .container>p:first-child{
+                background-color: royalblue;
+            }
+            .container>p:nth-child(2){
+                background-color: red;
+                
+                /* left: 50px; */
+            }
+            .container>p:last-child{
+                background-color: yellow;
+            }
+            .container>.second{
+                position: absolute;
+            }
+
+
+            
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>Demo text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus iure quod laudantium deserunt officia quam? </p>
+        <p class="second">Demo text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus iure quod laudantium deserunt officia quam? </p>
+        <p>Demo text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus iure quod laudantium deserunt officia quam? </p>
+    </div>
+</body>
+</html>

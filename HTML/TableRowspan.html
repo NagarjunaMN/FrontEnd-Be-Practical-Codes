@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <title>Table Rowspan</title>
+    </head>
+    <body>
+
+        <h2>Table Rowspan..!</h2>
+
+        <table  border="1" cellpadding ="20" cellspacing = "20">
+            
+            <tr>
+                <th>#</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>Gokul</td>
+                <td>Sunil</td>
+                <td>Karunakar</td>
+                <td>Jagadish</td>
+                <td>Akhil</td>
+                <td>Umme Ayesha</td>
+                <td>Jhansi Irigela</td>
+                <td>Zia Sahil</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Mobile</th>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+                <td>400</td>
+                <td>500</td>
+                <td>600</td>
+                <td>700</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>1000</td>
+                <td>2000</td>
+                <td>3000</td>
+                <td>4000</td>
+                <td>5000</td>
+                <td>6000</td>
+                <td>7000</td>
+                <td>8000</td>
+            </tr>
+            
+        </table>
+
+        <br> <hr> <br>
+        <table border="1" cellpadding ="20" >
+            <caption><i> A test table with merged cells</i></caption>
+            <thead>
+                <tr>
+                    <th rowspan="2"></th>
+                    <th colspan="2">Average</th>
+                    <th rowspan="2">Red Eyes</th>
+                </tr>
+                <tr>
+                    <th>height</th>
+                    <th>weight</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Males</th>
+                    <td>1.9</td>
+                    <td>0.003</td>
+                    <td>40%</td>
+                </tr>
+                <tr>
+                    <th>Females</th>
+                    <td>1.7</td>
+                    <td>0.002</td>
+                    <td>43%</td>
+                </tr>
+            </tbody>
+        </table>
+
+       <br> <hr> <br>
+
+        <table border="1" cellpadding ="20" >
+            <thead>
+                <th >Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Street</th>
+                <th>Male</th>
+                <th>Female</th>
+                <th>Others</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--Kerala and cochin row  -->
+                    <td rowspan="8">1</td>
+                    <td rowspan="4">Kerala</td>
+                    <td rowspan="2">Cochin</td>
+                    <td>New street</td>
+                    <td>500</td>
+                    <td>600</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Main street</td>
+                    <td>300</td>
+                    <td>288</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <!-- trivandrum row -->
+                    <td rowspan="2">Trivandrum</td>
+                    <td>Guru street</td>
+                    <td>500</td>
+                    <td>600</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>TVK street</td>
+                    <td>500</td>
+                    <td>600</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <!-- Maharasshtra and mumbai row  -->
+                    <td rowspan="4">Maharashtra</td>
+                    <td rowspan="2">Mumbai</td>
+                    <td>Krishna street</td>
+                    <td>700</td>
+                    <td>850</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Main street</td>
+                    <td>500</td>
+                    <td>600</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <!-- surath row -->
+                    <td rowspan="2">Surath</td>
+                    <td>New street</td>
+                    <td>500</td>
+                    <td>600</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Billa street</td>
+                    <td>500</td>
+                    <td>600</td>
+                    <td>2</td>
+                </tr>
+
+                <tr>
+                    <!-- Alaska row with 2streets -->
+                    <td rowspan="2">2</td>
+                    <td rowspan="2">Alaska</td>
+                    <td rowspan="2">AlaskaAKA Central</td>
+                    <td>New street</td>
+                    <td>200</td>
+                    <td>210</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Cross street</td>
+                    <td>1000</td>
+                    <td>1050</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br> <hr> <br>
+
+        <table border="1" cellpadding ="20" >
+            <tr>
+                <th rowspan="11">TCB</th>
+                <th >Order no:</th>
+                <td colspan="3">#ABC001</td>
+            </tr>
+            <tr>
+                <th>Order Date:</th>
+                <td colspan="3">23-Mar-2016</td>
+            </tr>
+
+            <tr><th colspan="4">Customer</th></tr>
+            
+            <tr>
+                <th>Name:</th>
+                <td colspan="3">John Pipas</td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td colspan="3">Independence day5th str, 11521</td>
+            </tr>
+
+            <tr><th colspan="4">Order Details</th></tr>
+
+            <tr>
+                <td>1</td>
+                <td>Of mice and Ten</td>
+                <td>Book</td>
+                <td>10.00$</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Les Miserables</td>
+                <td>Book</td>
+                <td>12.00$</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Game of thrones S01</td>
+                <td>DVD</td>
+                <td>50.00$</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Samsung Galaxy</td>
+                <td>Mobile phone</td>
+                <td>200.00$</td>
+            </tr>
+            <tr>
+                <th colspan="3" >Total</th>
+                <td>272.00$</td>
+            </tr>
+        </table>
+
+    </body>
+</html>

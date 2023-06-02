@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+<body>
+    <center>
+        <h1>Number Literal</h1>
+    </center>
+
+
+    <script>
+        let a =2; // Integer Number
+        let b =3.142; // Float-point Number
+        let c =0xff; // Hexadecimal value
+        let d =1.57e4; // Exponent value
+        console.log(a)
+        console.log(b)
+        console.log(c)
+        console.log(d)
+    </script>
+
+    <hr>
+    <center>
+        <h1>Number New instance..!</h1>
+    </center>
+
+    <script>
+        let e = new Number()
+        eo = 12;
+        console.log(eo+"<br>")
+    </script>
+
+    <hr>
+    <center>
+        <h1>By using an Number object constructor (using new keyword)</h1>
+    </center>
+    <script>
+        let f = new Number(16)
+        console.log(typeof f)
+        console.log(f)
+    </script>
+
+    <script>
+        let x = 10
+        let y = 20
+        let z = "30"
+        console.log(x+y)
+        console.log(z+z)
+        console.log(z+x)
+        console.log(x+z)
+    </script>
+    <pre>
+        1.isFinite(); //Returns Boolean Value
+        2.isInteger(); //Check Integer or not
+        3.parseFloat()
+        4.parseInt()
+        5.toExponential()
+        6.toFixed()
+    </pre>
+
+    <script>
+        document.write("Number.isFinite(Infinity) " + isFinite(Infinity)+"<br>");
+        document.write("Number.isFinite(3.142) " + Number.isFinite(3.142)+"<br>");
+
+        function divide(m,n){
+            return m/n;
+        }
+        document.write("Number.isFinite(divide(0,10))" + Number.isFinite(divide(0,10))+"<br>");
+        document.write("Number.isFinite(divide(10,0))" + Number.isFinite(divide(10,0))+"<br>");
+
+        //The parseFloat() method to parse floating point number from a string.
+
+        let s1 = "3.14";
+        console.log(typeof s1);
+        let s1Result = parseFloat(s1);
+        console.log('ParseFloat', s1Result);
+        console.log(typeof s1Result);
+
+        console.log("parseFloat : "+parseFloat("50.55px"));
+
+        //The parseInt method can be used to parse an integer from a string.
+
+        let s1Res = parseInt(s1)
+        console.log("parseInt :"+s1Res);
+        console.log(typeof s1Res);
+
+        //The toExponential() method to format or represent a number in exponential notation
+        let p = 67.1234;
+        let p1 = 6789.1234;
+        console.log("toExponential : "+p.toExponential());
+        console.log("toExponential : "+p1.toExponential());
+
+        let q = 72.635;
+        console.log("toFixed : "+q.toFixed()); //73 (note rounding, no fractional part)
+        console.log("toFixed : "+q.toFixed(2));//72.64 (note rounding)
+        console.log("toFixed : "+q.toFixed(1));//72.6
+        
+        // toString() method can be used to convert a number to its string equivalent
+        console.log((12).toString()) //"12"
+        console.log((15.6).toString()) //"15.6"
+
+    </script>
+</body>
+</html>

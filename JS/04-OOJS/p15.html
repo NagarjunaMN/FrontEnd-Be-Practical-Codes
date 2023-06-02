@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+</head>
+<body>
+    <center>
+        <h1>Prototype keyword - It is used to create a property to an constructor externally</h1>
+    </center>
+    <hr>
+    <script>
+        function Course() {}
+
+        Course.prototype.title = "Javascript"
+        Course.prototype.getTitle = () => {
+            document.write(`<h3> Function = ${this.title} </h3>`)
+            /*this pointer not allowed in arrow function*/
+        }
+        let c = new Course();
+        document.write(`<h3>  ${c.title} </h3>`)
+        c.getTitle();
+        
+    </script>
+
+    <script>
+        function User() {
+            this.name = "Manu";
+            this.getName = function () {
+                document.write(`<h3> My name is = ${this.name} </h3>`)
+            }
+        }
+        User.prototype.email = "manu@gmail.com";
+        User.prototype.getEmail = function () {
+            document.write(`<h3> My email is = ${this.email} </h3>`)
+        };
+        let x = new User();
+        console.log("User instance =",x);
+
+        document.write(`<h3> name = ${x.name} </h3>`)
+        document.write(`<h3> email = ${x.email} </h3>`)
+        x.getName();
+        x.getEmail();
+
+
+        
+    </script>
+</body>
+</html>

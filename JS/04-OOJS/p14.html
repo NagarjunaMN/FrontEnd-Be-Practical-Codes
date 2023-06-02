@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object inheritance</title>
+</head>
+<body>
+
+    <!-- Difference between constructor and function
+
+    function :-
+    1.Name starts with lowercase
+    2.cannot allow to create props
+    3.execute with function call
+
+    
+    constructor:-
+    1 name of constructor 1st letter starts with uppercase
+    2 allow to create properties using this keyword
+    3 access props with ref using new keyword
+    4 Constructor follows functions and object
+    5 constructor properties are created using this keyword
+    6 create an instance to constructor using new keyword
+    7 constructor can't return
+    
+
+-->
+
+    <center>
+        <h1>Class constructor (function constructor) ES5</h1>
+    </center>
+    <hr>
+    <script>
+        function Car() {
+            this.model = 2022;
+            this.color = "blue"
+
+            let milage = 20;
+            document.write(`<h3> Milage = ${milage} </h3>`);
+        }
+
+        //Car() //call -> its not allowed to access the property
+
+        //instance => It is a variable we provide permission to access the properties and methods of constructor
+        let x = new Car() 
+        console.log("constructor instance = ",x)
+        
+        document.write(`<h3> Model = ${x.model} </h3>`);
+        document.write(`<h3> Color = ${x.color} </h3>`);
+        
+       
+        
+     </script>
+</body>
+</html>

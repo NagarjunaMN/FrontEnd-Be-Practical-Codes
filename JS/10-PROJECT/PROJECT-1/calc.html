@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalC</title>
+    <link rel="stylesheet" href="assests/CSS/style.css">
+</head>
+<body>
+    <section>
+        <h1>CALCULATOR</h1>
+
+        <input type="text" name="number" id="number" placeholder="CALCULATOR">
+        <table>
+            <tr>
+                <td><button type="button" onclick="getValue('7')">7</button></td>
+                <td><button type="button" onclick="getValue('8')">8</button></td>
+                <td><button type="button" onclick="getValue('9')">9</button></td>
+                <td><button type="button" onclick="getValue('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="getValue('4')">4</button></td>
+                <td><button type="button" onclick="getValue('5')">5</button></td>
+                <td><button type="button" onclick="getValue('6')">6</button></td>
+                <td><button type="button" onclick="getValue('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="getValue('1')">1</button></td>
+                <td><button type="button" onclick="getValue('2')">2</button></td>
+                <td><button type="button" onclick="getValue('3')">3</button></td>
+                <td><button type="button" onclick="getValue('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="getValue('.')">.</button></td>
+                <td colspan="2"><button type="button" onclick="getValue('0')">0</button></td>
+                <td><button type="button" onclick="getValue('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="getValue('%')">%</button></td>
+                <td colspan="2"><button type="button" onclick="clearValue()">Clear</button></td>
+                <td><button type="button" onclick="result()">=</button></td>
+            </tr>
+        </table>
+    </section>
+    <script>
+        function getValue(number) {
+            document.getElementById('number').value += number;
+        }
+        function clearValue() {
+            document.getElementById('number').value = "";
+        }
+        function result() {
+            let result = document.getElementById('number').value;
+            console.log(result);
+            let res = eval(result)
+            document.getElementById('number').value = res;
+            
+        }
+    </script>
+</body>
+</html>

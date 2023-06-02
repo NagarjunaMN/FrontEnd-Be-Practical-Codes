@@ -1,0 +1,242 @@
+/* h6 HTML code */
+
+.cssColor1{
+    background-color: teal;
+}
+
+.cssColor2{
+    background-color: #808080;
+    /* grey */
+}
+
+.cssColor3{
+    background-color: rgb(135, 206, 235); 
+    /* skyblue */
+}
+
+.commonCssColors{
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* p7 HTML CODE */
+.jumbotron{
+    background-color: #8e44ad;
+    border-radius: 10px;
+}
+
+.cssFont{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    font-variant: small-caps;
+}
+
+.cssText{
+    text-align: justify;
+    line-height: 2;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    text-decoration:underline;
+    text-transform: uppercase;
+}
+
+.cssText>p{
+    text-indent: 100px;
+}
+
+/* p8.html code */
+.navBar{
+    background-color: grey;
+
+}
+
+.navBar>ul{
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+    float: right;
+}
+
+.navBar>ul>li{
+    display: inline-block;
+    padding: 20px;
+}
+
+
+.navBar>ul>li>a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.navBar>ul>li:hover{
+    background-color: #fff;
+}
+
+.navBar>ul>li:hover a{
+    color: #808080;
+}
+
+.navBar>img{
+    height: 54px;
+}
+
+/* LIST MARKER POSITION */
+.list-marker-position>ol>li{
+    background-color: teal;
+    padding: 20px;
+    margin-bottom: 20px;
+    list-style-position: inside;
+}
+
+.list-marker-position>ol>li::marker{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* USING IMAGE AS BULLET POINT */
+.list-icon>ul>li{
+    list-style-image: url(../Images/bullet.png);
+}
+
+.list-shorthand>ul>li{
+    background-color: teal;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+    /* list-style-type: none;
+    list-style-position: inside;
+    list-style-image: url(); */
+
+    list-style: none inside url(../Images/bullet.png);
+}
+
+/* P9.html Code */
+.empty-cell-table{
+    empty-cells: hide;
+}
+
+.odd-even-table,
+ .odd-even-table th,
+  .odd-even-table td,
+  .layout-table,
+  .layout-table th,
+  .layout-table td{
+    border: 2px solid #808080;
+    padding: 20px;
+    border-collapse: collapse;
+}
+
+.odd-even-table tr:nth-child(odd){
+    background-color: darkgray;
+}
+
+.odd-even-table tr:nth-child(even){
+    background-color: lightgray;
+}
+
+.odd-even-table tr:hover{
+    background-color: #808080;
+}
+
+.odd-even-table th{
+    background-color: #808080;
+    color: #fff;
+}
+
+.odd-even-table>caption{
+    color: #808080;
+    font-weight: bold;
+    caption-side: bottom;
+}
+
+.odd-even-table td{
+    height: 200px;
+    vertical-align: bottom;
+}
+
+/* Table layout */
+
+.layout-table{
+    /* width: 100%; */
+    width: 1%;
+    table-layout: fixed;
+    
+}
+
+.layout-table td, .layout-table th{
+    overflow: auto;
+}
+
+/* p10.html */
+*{
+    padding: 0%;
+    margin: 0%;
+}
+header{
+    background-color: grey;
+}
+header>nav>ul{
+    list-style-type: none;
+    float: right;
+}
+header>nav>img{
+    height: 64px;
+}
+
+header>nav>ul>li{
+    display: inline-block;
+    padding: 25px;
+}
+
+header>nav>ul>li:hover{
+    background-color: #fff;
+    
+}
+
+header>nav>ul>li:hover a{
+    color: #808080;
+    
+}
+
+header>nav>ul>li>a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* p11.html BANNER CODE */
+
+.commonBanner{
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    height: 400px;
+}
+.commonBanner>h1{
+    font-size: 60px;
+}
+
+.commonBanner>h1:hover{
+    color: red;
+}
+/* my code below */
+.commonBanner>p:hover{
+    color: darkred;
+}
+
+/* p11.html code */
+.banner1{
+    background-color: palevioletred;
+}
+
+/* p12.html */
+.banner2{
+    background-image: url(../Images/Image1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+

@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <center>
+        <h1>min and max without values</h1>
+        <p>check console for output</p>
+    </center>
+    <hr>
+    
+    <script>
+        var x = Math.min();
+        console.log("min() =",x) //infinity
+
+        var x1 = Math.max();
+        console.log("max() =",x1) // -infinity
+
+        var r1 = x > x1;
+        var r2 = x < x1;
+        var r3 = x === x1;
+
+        console.log("r1 = ", Number(r1)); //1
+        console.log("r2 = ", Number(r2)); //0
+        console.log("r3 = ", Number(r3)); //0
+
+    </script>
+</body>
+</html>

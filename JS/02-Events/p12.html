@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-EVENT</title>
+</head>
+<body>
+  <!-- <video src="assests/Media/big_buck_bunny_720p_1mb.mp4" height="200" id="videoFile"></video> -->
+    <audio src="assests/Media/Boss Party.mp3" id="videoFile" height="200"></audio>
+  <hr>
+
+  <button onclick="playHandler()">Play</button>
+  <button onclick="pauseHandler()">Pause</button>
+  <button onclick="fullScreen()">Fullscreen</button>
+
+    <script>
+        function playHandler(){
+            document.getElementById('videoFile').play()
+        }  
+        function pauseHandler(){
+            document.getElementById('videoFile').pause()
+        } 
+        function fullScreen(){
+            document.getElementById('videoFile').requestFullscreen()
+        }      
+      
+    </script>
+</body>
+</html>

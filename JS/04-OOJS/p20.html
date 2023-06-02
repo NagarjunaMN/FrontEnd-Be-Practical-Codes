@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object.assign() </h1>
+    <script>
+        var user1 = {
+            name: "Rohan",
+            email : "rohan@gmail.com"
+        };
+        var user2 = {
+            age: 23,
+            email : "rohan123@gmail.com"
+        };
+        console.log("user1 = ",user1)
+        console.log("user1 = ",user2)
+
+        var res = Object.assign(user1,user2);
+       
+        console.log("After assign = ",res)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <style>
+        section{
+            width: 100%;
+            overflow-x: hidden;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+            grid-gap: 10px;
+            text-align: center;
+        }
+        article{
+            background-color: #42515A;
+            padding: 5px;
+            color: #eee;
+            height: 400px;
+            font-size: 20px;
+            border-radius: 25px;
+        }
+        article h4{
+            color: #C74385;
+            font-size: 30px;
+            transition: 1s;
+        }
+        article h4:hover{
+            color: white;
+            font-size: 30px;
+        }
+
+        div{text-align: center;}
+        svg{
+            background-color: #C74385;
+            color: white; 
+            margin: 15px !important;
+            padding: 15px !important;
+            border: none;
+            border-radius: 50%;
+            transition: 1s;
+        }
+        svg:hover{
+            background-color: white;
+            color: #C74385;
+        }
+
+    </style>
+    <link rel="stylesheet" href="assests/fontawesome/css/all.css">
+
+</head>
+<body>
+    <center>
+        <h1>Fetch()..!</h1>
+    </center>
+    <hr>
+
+    <section id="block"></section>
+
+    <script>
+
+        fetch(`https://jsonplaceholder.typicode.com/users`)
+        .then(response => response.json())
+        .then(res => {
+            console.log("res",res);
+            print(res)
+        })
+        .catch(err=> {console.log("Error : ",err.message)})
+
+        let blk = document.querySelector("#block");
+
+        function print(data) {
+            data.forEach(item => {
+                // Create an html tags
+                console.log(item)
+                let article = document.createElement('article');
+                let name = document.createElement('h4');
+                let email = document.createElement('h5');
+                let body = document.createElement('h5');
+                let id = document.createElement('h5');
+                let postId = document.createElement('h5');
+                let div = document.createElement('div')
+                let twitter = document.createElement('i')
+                let instagram = document.createElement('i')
+                let facebook = document.createElement('i')
+                
+
+                // add text content
+                name.textContent =  item.name;
+                email.textContent ="Email : "+ item.email;
+                body.textContent ="Body : "+ item.body;
+                id.textContent ="Id : "+ item.id;
+                postId.textContent ="Post Id : "+ item.postId;
+
+                twitter.className = "fa-brands fa-twitter ";
+                instagram.className = "fa-brands fa-instagram ";
+                facebook.className = "fa-brands fa-facebook ";
+                div.appendChild(twitter)
+                div.appendChild(instagram)
+                div.appendChild(facebook)
+                
+
+
+                // appending to main node
+                article.appendChild(name);
+                article.appendChild(email);
+                article.appendChild(body);
+                article.appendChild(id);
+                article.appendChild(postId);
+                article.appendChild(div)
+                
+
+                blk.appendChild(article);
+            });
+        }
+
+
+    </script>
+    <script src="assests/fontawesome/js/all.js"></script>
+</body>
+</html>

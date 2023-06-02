@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+<body>
+    <center>
+        <h1>CUSTUM CONSTRUCTOR</h1>
+    </center>
+    <hr>
+    <script>
+       function Car() {
+        var x = 12;
+        this.title= "Jeep";
+        this.model = 12312;
+        this.fuel = "petrol"
+        this.display = function () {
+            document.write("<h3> Display function </h3>")
+        }
+       }
+
+        var c = new Car()
+        console.log(c)
+        document.write(`<h3> ${c.title}</h3>`)
+        document.write(`<h3> ${c["model"]}</h3>`)
+        document.write(`<h3> ${c.fuel}</h3>`)
+
+
+     
+ </script>
+</body>
+</html>

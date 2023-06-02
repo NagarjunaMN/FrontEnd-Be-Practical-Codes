@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(){
+            this.name = "Be-Practical";
+            this.gender = "Male"
+        }
+        var stud = new Student();
+        console.log("---------->",Student.constructor)
+
+        document.write("<b>Student.prototype : </b>"+Student.prototype+"<br><br>") //object
+        console.log(Student.prototype)
+
+        document.write("<b>stud.prototype : </b>"+stud.prototype+"<br><br>") //undefined
+        console.log(stud.prototype);
+
+        document.write("<b>stud.__proto__ : </b>"+stud.__proto__+"<br><br>") //object
+        console.log(stud.__proto__ )
+
+        document.write("<b>typeof stud.prototype : </b>"+typeof stud.prototype+"<br><br>")
+        document.write("<b>stud.__proto__ : </b>"+typeof stud.__proto__+"<br><br>")
+
+        document.write("<b>Object.keys(stud) : </b>"+Object.keys(stud)+"<br><br>")// Retrieves all the properties name for the specific object
+
+
+    </script>
+</body>
+</html>

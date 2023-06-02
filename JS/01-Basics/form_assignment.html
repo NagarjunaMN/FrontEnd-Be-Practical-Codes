@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+            background-color: lightcoral;
+            padding: 20px;
+            margin: 20px;
+            
+        }
+        form>input{
+            margin: 20px;            
+        }
+        form>label{
+            font-size: 20px;
+            color: white;
+        }
+        p{
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action='#' method="get">
+    
+            <label for="">Enter the First Name:</label>
+            <input type="text" name="firstName" id="firstName" > <br>
+        
+    
+            <label for="">Enter the Last Name:</label>
+            <input type="text" name="lastName" id="lastName" > <br>
+        
+    
+            <label for="">Enter the Phone Number:</label>
+            <input type="text" name="phoneNumber" id="phoneNumber"> <br>
+
+            <label for="">Enter the Email ID:</label>
+            <input type="email" name="email" id="email" > <br>
+        
+    
+            <button type="button" id="btn">Submit</button>
+        
+    </form>
+    <p id="res"></p>
+
+    <script>
+        function valid() {
+            let firstName = document.getElementById('firstName').value;
+            let lastName = document.getElementById('lastName').value;
+            let phoneNumber = document.getElementById('phoneNumber').value;
+            let email = document.getElementById('email').value;
+            
+            if(firstName == '' || lastName == ''|| phoneNumber == '' || email == ''){
+                document.getElementById('res').innerHTML="Enter all the values..!";
+                document.getElementById('res').style.color="red";
+            }else if(firstName.length <= 2 || lastName.length < 2){
+                document.getElementById('res').innerHTML="Enter your complete first and last name..!";
+                document.getElementById('res').style.color="red";
+            }else if(isNaN( parseInt(firstName)) == false || isNaN( parseInt(lastName)) == false ){
+                document.getElementById('res').innerHTML="Enter Text values in first and last name..!";
+                document.getElementById('res').style.color="red";
+            }
+            else if(isNaN( parseInt(phoneNumber)) == true){
+                document.getElementById('res').innerHTML="Enter Numeric values in Phone number..!";
+                document.getElementById('res').style.color="red";
+            }
+            else if(phoneNumber.length < 10 || phoneNumber.length > 10){
+                document.getElementById('res').innerHTML="Enter Valid 10 digits Phone number..!";
+                document.getElementById('res').style.color="red";
+            }
+            else if(email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/) == null){
+                document.getElementById('res').innerHTML="Enter Valid email ID..!";
+                document.getElementById('res').style.color="red";
+            }
+            else{
+                document.getElementById('res').innerHTML="Successfully Validated!";
+                document.getElementById('res').style.color="green";
+            }
+
+        }
+
+        document.getElementById('btn').onclick = valid
+    </script>
+</body>
+</html>

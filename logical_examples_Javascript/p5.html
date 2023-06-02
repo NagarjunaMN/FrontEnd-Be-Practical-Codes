@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>Restlt checking using conditional statement</h1>
+    <form action="">
+        <label for="">Results</label>
+        <input type="text" name="" id="res" onkeyup="checking()">
+    </form> 
+     <h3 id="outpt"></h3>
+     
+     MINE-->
+    <form action="">
+        <div class="form-group">    
+            <label for="marks">Enter Result in %</label>
+            <input type="number" name="marks" id="marks" class="form-input" onkeyup="checking()">
+        </div>
+    </form>
+
+    <section id="output"></section>
+
+   
+
+    <!-- <script>
+        function checking() {
+            let value = parseInt(document.getElementById('res').value)
+
+            if(value >= 0 && value <35){
+                document.getElementById("outpt").innerHTML ="Fail"
+            }else if(value >= 35 && value <50){
+                document.getElementById("outpt").innerHTML ="Third class"
+            }else if(value >= 50 && value <60){
+                document.getElementById("outpt").innerHTML ="second class"
+            }else if(value >= 60 && value <80){
+                document.getElementById("outpt").innerHTML ="First class"
+            }else{
+                document.getElementById("outpt").innerHTML ="Distinction class"
+            }
+        }
+    </script> -->.
+
+    <script>
+        var input = document.querySelector(".form-input")
+        var marks = document.getElementById("marks")
+
+        //by using getelementbyid().value
+        input.addEventListener('keyup', function (e) {
+            let x = Number(input.value);
+            console.log("Value =", input.value)
+        })
+
+        //by using event.target.value
+        input.addEventListener('keyup', function (event) {
+            let y = Number(event.target.value);
+            console.log("Value =", event.target.value)
+        })
+    </script>
+</body>
+</html>

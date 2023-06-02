@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            background: #0f0c29;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-family: 'Open Sans', sans-serif;        }
+        center>h1{
+            color: white;
+            font-size: 55px;
+            text-decoration: underline;
+            }
+        .container{
+            display: flex;
+            flex-flow: column wrap;
+            gap: 20px;
+            height: 450px;
+            width: 55%;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: white;
+
+            border-radius: 25px;
+        }
+        .container>.buttons>button{
+            padding: 10px 30px;
+            margin: 20px;
+            font-size: 25px;
+            border: none;
+            border-radius: 10px;
+            transition: 1s;
+        }
+        .container>.buttons>button:first-child{
+            background-color: green;
+            color: white;
+        }
+        .container>.buttons>button:first-child:hover,.container>.buttons>button:nth-child(2):hover,.container>.buttons>button:last-child:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .container>.buttons>button:first-child:hover{background-color: white; color: green; border:2px solid green}
+        .container>.buttons>button:nth-child(2):hover{background-color: white; color: red; border:2px solid  red;}
+        .container>.buttons>button:last-child:hover{background-color: white; color: blue; border:2px solid  blue;}
+        .container>.buttons>button:nth-child(2){
+            background-color: red;
+            color: white;
+        }
+        .container>.buttons>button:last-child{
+            background-color: blue;
+            color: white;
+        }
+        .container>#clock>h1,.container>#clock>span{
+            display: inline-block;
+            font-size: 60px;
+            color: white;
+        }
+        .container>#clock>h1:last-child{
+            font-size: 30px;
+        }     
+        .container>#clock{
+            border-radius: 25px;
+            background-color: lightslategray;
+            padding: 0px 30px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Stopwatch</h1>
+        <div class="container">
+            <div class="buttons">
+                <button type="button" id="start">Start</button>
+                <button type="button" id="stop">Stop</button>
+                <button type="button" id="reset">Reset</button>
+            </div>
+            <div id="clock">
+                <h1 id="hours">00</h1><span>:</span>
+                <h1 id="mins">00</h1><span>:</span>
+                <h1 id="secs">00</h1><span>:</span>
+                <h1 id="tenthSecs">00</h1>
+            </div>
+        </div>
+    </center>
+    <script>
+        // document.write(time.getHours())
+
+        let hours = document.getElementById("hours");
+        let mins = document.getElementById("mins");
+        let secs = document.getElementById("secs");
+        let tenthSecs = document.getElementById("tenthSecs");
+        let startBtn = document.getElementById("start");
+        let stopBtn = document.getElementById("stop");
+        let resetBtn = document.getElementById("reset");
+        hoursValue = 0;
+        minsValue = 0;
+        secsValue = 0;
+        tenthSecsValue =0;
+        var interval;
+
+        startBtn.onclick = function () {
+            interval = setInterval("timerStart()",10)
+        }
+        function addZero(num) {
+            if (num < 10) {
+                return "0"+num;
+            }else{
+                return num
+            }
+        }
+
+        function timerStart() {
+            tenthSecsValue++;            
+            if(tenthSecsValue < 99){
+                tenthSecs.innerHTML = addZero(tenthSecsValue)
+            }else{
+                tenthSecsValue = 0;
+                tenthSecs.innerHTML = addZero(tenthSecsValue)
+
+                secsValue++;
+                secs.innerHTML = addZero(secsValue)
+            }
+
+            if(secsValue == 60){
+                secsValue = 0;
+                secs.innerHTML = addZero(secsValue)
+                minsValue++;
+                mins.innerHTML = addZero(minsValue) 
+            }
+            if(minsValue == 60){
+                minsValue = 0;
+                mins.innerHTML = addZero(minsValue)
+                hoursValue++;
+                hours.innerHTML = addZero(hoursValue)
+            }
+            if(hoursValue == 24){
+                clearInterval(interval);
+            }
+            
+
+        }
+
+        stopBtn.onclick = () => {clearInterval(interval)}
+        resetBtn.onclick = () => {
+            clearInterval(interval);
+            tenthSecsValue =0;
+            tenthSecs.innerHTML = addZero(tenthSecsValue)
+            secsValue = 0;
+            secs.innerHTML = addZero(secsValue)
+            minsValue = 0;
+            mins.innerHTML = addZero(minsValue)
+            hoursValue = 0;
+            hours.innerHTML = addZero(hoursValue)
+
+        }
+
+    </script>
+</body>
+</html>

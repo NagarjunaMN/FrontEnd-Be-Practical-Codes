@@ -1,0 +1,348 @@
+.title{
+    background-color:rgb(255, 187, 52) ;
+    padding:30px ;
+    margin: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.title>h1{
+    color: rgb(255, 136, 0);
+}
+
+.title>p{
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Common class */
+
+.common{
+    background-color: #ddd;
+    padding: 30px;
+    margin: 30px;
+    border: 3px solid #ccc;
+}
+/* p1.html code  */
+.cssOutline{
+    outline: 3px solid #000;
+    border: 5px solid red;
+    border-radius: 10px;
+   
+    /* to make border to the border we  are using outline */
+}
+
+/* p3.html code */
+.cssOverflow>p{
+    text-align: justify;
+    line-height: 2;
+    border: 2px solid #000;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    overflow: auto;
+    
+}
+
+.cssOverflow>p:last-child{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* p4.html code */
+
+.cssWhiteSpace{
+    /* white-space: break-spaces; */
+    white-space: break-spaces;
+}
+
+/* p5.html code */
+
+.cssUnits>h3:nth-child(1){
+    margin: 0.5in; /* Inches 1 in = 2.5cm */
+}
+
+.cssUnits>h3:nth-child(2){
+    line-height: 3cm; /* centimeters */
+}
+.cssUnits>h3:nth-child(3){
+    word-spacing: 4mm; /* millimeters */
+}
+
+.cssUnits>h3:nth-child(4){
+    font-size: 12pt; /* points */
+}
+
+.cssUnits>h3:nth-child(5){
+    font-size: 1pc; /* picas */
+}
+.cssUnits>h3:nth-child(6){
+    font-size: 1px; /* pixel */
+}
+
+/* p6.html Code */
+
+.cssVisibilityDisplay{
+
+    background-color: teal;
+    padding: 20px;
+    border: 5px solid red;
+}
+
+.cssVisibilityDisplay> .cssVisibility{
+    visibility: hidden;
+    
+    /* when the visibility is hidden the text will not be displayed however the space is left for the text,it is said to as hidden */
+}
+
+.cssVisibilityDisplay> .cssDisplay{
+    display: none;
+    /* when the display is none the text will not be displayed and the space is also removed, it is said to as removed */
+}
+
+/* p7.html code */
+.cssWordwrap>p{
+    background-color: #808080;
+    padding: 20px;
+    width: 300px;
+    word-wrap: break-word;
+    
+
+    /* word wrap : break word is used to control the overflow and to display the content within a space */
+}
+
+.cssResize{
+    overflow: auto;
+    resize: horizontal;
+}
+
+.cssOffsetOutline{
+    outline: 3px solid #000;
+    outline-offset: 10px;
+    /* outline offset provides the space between the outline and border */
+}
+
+.cssColumnCount{
+    text-align: justify;
+    line-height: 2;
+    /* column-count: 4; */
+    column-gap: 50px;
+    column-rule: 2px solid rebeccapurple;
+    column-width: 300px;
+
+    /* using column count we can divide the text in columns and 
+    column gap provides gap between column
+    column rule gives the line/border between the columns
+    instead of column count we can use column width to divide the text in columns and we can give the column width value */
+}
+
+/* p8.html */
+
+.cssOpacity>p{
+    background-color: teal;
+    color: #fff;
+    padding: 20px;
+    opacity: 0.2;
+    border: 2px solid rgb(0, 0, 255) !important;
+}
+.cssOpacity>div{
+    background-color: rgba(128, 128, 128, 0.8);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+}
+
+/* p9.html code */
+.cssAttribute>h1{
+    color: brown;
+}
+.cssAttribute>p{
+    color: #808080;
+}
+.cssAttribute>[title]{
+    background-color: yellow;
+}
+.cssAttribute>p[title]{
+    padding: 20px;
+    font-weight: bold;
+}
+.cssAttribute>h1[title]{
+    font-style: italic;
+}
+
+.cssAttribute>p>abbr[id]{
+    color: white;
+    background-color: red;
+}
+
+.cssAttribute>form>[type]{
+    width: 100%;
+    height: 25px;
+    margin-bottom: 20px;
+}
+.cssAttribute>form>[type='text']{
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+.cssAttribute>form>[type='submit']{
+    border: 2px solid red;
+    background-color: lightskyblue;
+}
+
+/* p10.html code*/
+
+.cssPseudoClass>h1{
+    color: dimgray;
+}
+
+.cssPseudoClass>h1:hover{
+    color: green;
+}
+.cssPseudoClass>a:link{
+    color: white;
+}
+.cssPseudoClass>a:hover{
+    color: yellow;
+}
+
+.cssPseudoClass>a:active{
+    color: green;
+}
+
+.cssPseudoClass>a:visited{
+    color: red;
+}
+
+
+/* p11.html code */
+
+.cssPseudoElement>section:first-child::first-line,
+.cssPseudoElement>section:nth-child(2)::first-letter{
+    background-color: red;
+    color: white;
+}
+.cssPseudoElement>section:nth-child(2)::first-letter{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cssPseudoElement>section:last-child>h1::before{
+    content: "Before H1 ";
+    background-color: blue;
+    color: white;
+}
+
+.cssPseudoElement>section:last-child>h1::after{
+    content: " After H1";
+    background-color: whitesmoke;
+    color: blue;
+}
+
+
+/* .p12.html code */
+.cssPosition>h1:first-child, .cssPosition>div>h1:first-child{
+    background-color: teal;
+}
+
+.cssPosition>h1:nth-child(2),.cssPosition>div>h1:nth-child(2){
+    background-color: tomato;
+}
+.cssPosition>h1:nth-child(3),.cssPosition>div>h1:nth-child(3){
+    background-color: violet;
+}
+
+.cssPosition h1{
+    padding: 20px;
+    color: white;
+}
+
+.cssPosition>.second{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/* css position we can change the position of the element the default is position = static but using the position = relative the origin or starting of the element will be on its fixed area point in the top left corner and using the top left bottom right attributes we can change the position
+
+using the position as absolute the origin of the element will be on the body  and it looses its allocated space and the below element occupies its space and using the top left bottom right attributes we can change the position the above example the element appears on the top left */
+
+.cssPosition>div{
+    border: 2px solid black;
+    padding: 20px;
+    position: relative;
+}
+.cssPosition>div>.fifth{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/* without giving the position as relative for the parent element by giving the right property in the position absolute in the child elemet the fifth h1 tag element appears on the top right of the body but on giving the parent position as relative the origin of the child starts from the parent and now it appears on the top right on the parent div tag enclosed in the border */
+
+.cssPosition>.seven{
+    background-color: blue;
+    
+}
+.cssPosition>.eight{
+    background-color: crimson;
+    position: sticky;
+    top: 0%;
+    
+}
+
+/* Using the postion as sticky we are sticking the elemt on to the screen while scrollling through the page , on giving the top property as 0 as long the eight elemnt is below the screen it stays static and on scrolliing below the eight element tag sticks to the top  */
+
+.cssPosition> .nine{
+    background-color: black;
+    position: fixed;
+    top: 45%;
+    right: 0%;
+    border-radius: 5px;
+    transition: 1s;
+}
+.cssPosition> .nine:hover{
+    right: 2%;
+}
+
+/* p13.html code */
+
+.zIndex{
+    position: relative;
+    height: 300px;
+}
+
+.zIndex>section{
+    width: 200px;
+    height: 150px;
+    padding: 20px;
+    color: #fff;
+    position: absolute;
+}
+
+.zIndex>.first{
+    background-color: darkgoldenrod;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+.zIndex>.second{
+    background-color: blueviolet;
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+}
+
+.zIndex>.third{
+    background-color: darkmagenta;
+    top: 100px;
+    left: 100px;
+    z-index: 3;
+}
+.zIndex>.first:hover{
+    z-index: 4;
+}
+.zIndex>.second:hover{
+    z-index: 4;
+}

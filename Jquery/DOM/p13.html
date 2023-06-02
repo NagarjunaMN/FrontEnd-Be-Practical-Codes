@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #blk {
+            width: 300px;
+            height:300px;
+            overflow: auto;
+            background-color: slateblue;
+            color: #fff;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>ScrollTop</h3>
+
+    <h1 id="output"></h1>
+
+    <div id="blk">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis nihil unde corrupti in ea laborum, eius, nobis beatae dicta ipsum quibusdam cupiditate sit, ab fugit accusamus voluptate quia aspernatur? Esse? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum consequuntur quidem eveniet illum quia et provident vel minima libero? Incidunt molestiae corporis quae reiciendis est excepturi aut nihil ipsa! Corporis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, commodi. Voluptates aut inventore ratione! Magni eaque, mollitia suscipit dolor dolorem distinctio possimus molestiae incidunt ratione laudantium autem repellat debitis obcaecati? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolorem consequatur iure? Hic, quibusdam expedita ab fugit quaerat itaque, consequatur molestias sapiente odit quisquam architecto deleniti voluptatum blanditiis explicabo obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea adipisci, dolore doloremque eos fugit, ullam, nobis quo ex veritatis molestias aperiam temporibus quasi consequatur. Quibusdam ea error fuga qui nobis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et molestias excepturi illo consequuntur libero numquam, aut voluptatum saepe! Ab doloremque aut a veniam et perferendis delectus fugiat repudiandae libero voluptatibus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illum maiores ipsa sequi rerum itaque tempore ab, consequatur expedita blanditiis, totam magni delectus aliquam. Corrupti ipsum sit nemo facere numquam?</p>
+    </div>
+    
+
+    <script>
+        $(document).ready(function(){
+            // statements
+            $('#blk').scroll(function () {
+                $x = $(this).scrollTop(); // read the scrolling position
+                $('#output').text(` ${ Math.round($x) } px `);
+            })
+        });
+    </script>
+</body>
+</html>

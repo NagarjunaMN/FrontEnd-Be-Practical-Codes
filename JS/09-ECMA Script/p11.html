@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Map() constructor</h3>
+    <script>
+        var x = new Map(); // ref / instance
+        //ref.set("property","value")
+        //ref.get("property")
+
+        x.set("id",1234);
+        x.set("title","javascript");
+        x.set("duration","1month"); 
+        console.log(x); 
+        
+        // Object.keys();
+        for (const item of x) {
+            console.log(item); 
+        }
+        
+        for (const item of x.keys()) {
+            console.log("key",item); 
+        }
+
+        for (let [key,value] of x) {
+            console.log(`key = ${key} and value = ${value}`); //key:value
+        }
+
+    </script>
+</body>
+</html>

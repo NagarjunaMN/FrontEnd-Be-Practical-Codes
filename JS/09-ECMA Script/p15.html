@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Object.assign()</h3>
+    
+    <script>
+        /*
+        This method is used tocopy the values of all enumerable non properties from one or more source of objects
+        to a target objects.
+        Object.assign(target,...source)
+        */
+        "use strict";
+        var x = {
+            name:"Toyota",
+            id: "T124"
+        };
+
+        var y = Object.assign({},x);
+        console.log("y-object", y);
+        for (let item in y) {
+            document.write(y[item]+"\n")
+        }
+        for (let item in y) {
+            document.write(`${item} : ${y[item]}`)
+        }
+    </script>
+</body>
+</html>

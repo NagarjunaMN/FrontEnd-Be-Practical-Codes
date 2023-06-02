@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <center>
+        <h1>This is a CANVAS Tag</h1>
+        <p>
+            The HTML canvas element provides html a bitmaps surface to work with. It is used to draw graphics on the web page.
+            The <b>HTML5 CANVAS tag</b> is used to draw graphics using scripting language like javascript
+        </p>
+    </center>
+    <canvas>This is First Canvas tag</canvas>
+
+    <canvas id="mycanvas2" width="300px" height="100px" style="border: 2px solid red;"></canvas>
+    <p><b>Note : It is always necessary to specify the id attribute and the height and width attribute to define the size of the canvas. You can have multiple canvas elements on one HTML page</b></p>
+    <hr>
+    <canvas id="mycanvas3" width="250px" height="150px" style="border: 1px solid blue;"></canvas>
+    <script>
+        let canvas3 = document.getElementById('mycanvas3').getContext("2d")
+        canvas3.fillStyle = "red";
+        canvas3.fillRect(25,25,200,100)
+    </script>
+
+    <center>
+        <h1>Drawing circle on canvas</h1>
+    </center>
+    <canvas id="mycanvascircle" width="200" height="200" style="border: 1px solid green;"></canvas>
+    <script>
+        let canvas2 = document.getElementById('mycanvascircle').getContext("2d")
+        canvas2.fillStyle = "red";
+        canvas2.arc(100,100,90,0, 2*Math.PI)
+        canvas2.fill();
+        canvas2.stroke();
+    </script>
+    <hr>
+
+    <center>
+        <h3>Drawing text on canvas</h3>
+    </center>
+    <canvas id="mycanvas" width="578" height="200" style="border: 1px solid pink;" ></canvas>
+
+    <script>
+        let canvas3 = document.getElementById('mycanvas').getContext("2d")
+        canvas3.font="40pt Times New Roman"
+        canvas3.fillStyle="blue";
+        canvas3.fillText('Hello HTML-5', 150,100);
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Javascript Object</h1>
+    <pre>
+        1. By Object literal
+        2. By creating instance of Object directly (using new keyword)
+        3. By using an object constructor (using new keyword)
+    </pre>
+    <hr>
+
+    <h1>By Object literal</h1>
+    <p><strong>SYNTAX :</strong></p>
+
+    <pre>
+        let literalObjectName = {
+            "property1":"value1",
+            "property2":"value2",
+            "property3":"value3",
+        };
+        console.log(literalObjectName)
+        console.log(typeof(literalObjectName))
+        console.log(literalObjectName.property1)
+    </pre>
+
+   
+    <script>
+        // let firstName = {};
+        // console.log(firstName);
+        // console.log(typeof(firstName));
+    </script>
+
+    <script>
+        let empDetails = {
+            id:1,
+            firstName : 'Nagarjuna',
+            lastName :'Mondru',
+            email : "rajaRamMohanRoy@gmail.com",
+            fullName : function() {
+                return this.firstName+' '+this.lastName;
+            },
+            getEmail : () =>{return this.email},
+            mobile : [7894561320,4667891320],
+            pincode : 560075,
+            address : {local : "Bengaluru",
+                        per : "Guntur"},
+            photo : 'assests/Images/Image1.jpg'
+        };
+
+        console.log(empDetails);
+        console.log(typeof (empDetails));
+        console.log(empDetails.firstName)
+        console.log(empDetails.lastName)
+        console.log(empDetails.email)
+        console.log(empDetails.fullName())
+        console.log(empDetails.getEmail())
+        console.log(empDetails.mobile)
+        console.log(empDetails.mobile[0])
+        console.log(empDetails.mobile[1])
+        console.log(empDetails["pincode"])
+        console.log(empDetails.address)
+        console.log(empDetails.address.local)
+        console.log(empDetails.address.per)
+        console.log(empDetails.photo)
+
+        document.write(`<table border = 1 cellpadding = 20px>
+            <tr>
+                <th>First Name</th>  
+                <th>Last Name</th>
+                <th>Full Name</th>
+                <th>Mobile Number</th>
+                <th>Alt Mobile Number</th>
+                <th>Local Address</th>
+                <th>Per Address</th>
+                <th>Pincode</th>
+                <th>Emp Photo</th>
+                <th>Options</th>  
+            </tr>
+            <tr>
+                <td>${empDetails.firstName}</td>
+                <td>${empDetails.lastName}</td>
+                <td>${empDetails.fullName()}</td>
+                <td>${empDetails.mobile[0]}</td>
+                <td>${empDetails.mobile[1]}</td>
+                <td>${empDetails.address.local}</td>
+                <td>${empDetails.address.per}</td>
+                <td>${empDetails.pincode}</td>
+                <td><img src=${empDetails.photo} height = 90px></td>
+                <td><button>Edit</button>
+                <button>Delete</button></td>
+            </tr>
+            </table>`);
+
+    </script>
+</body>
+</html>

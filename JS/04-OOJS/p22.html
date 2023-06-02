@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object.keys()</h1>
+    <script>
+        //it returns array of keys
+        const user = {
+            name : "Raj",
+            email : "raj@gmail.com",
+            mobile : 7898751525,
+            age : 25
+        }
+        console.log("keys = ",Object.keys(user))
+        for (const item of Object.keys(user)) {
+            document.write(`<h3> ${item} </h3>`)
+        }
+    </script>
+    <h1>Object.values()</h1>
+    <script>
+        //it returns array of values
+        const user1 = {
+            name : "Raj",
+            email : "raj@gmail.com",
+            mobile : 7898751525,
+            age : 25
+        }
+        console.log("values = ",Object.values(user1))
+        for (const item of Object.values(user1)) {
+            document.write(`<h3> ${item} </h3>`)
+        }
+    </script>
+</body>
+</html>

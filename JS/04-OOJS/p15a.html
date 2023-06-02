@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Class ES-6 > Group of objects (state and behaviour)</h3>
+    <p>State => variables ->properties</p>
+    <p>Behaviour ->methods</p>
+
+    <script>
+        class User {
+            //built-in method
+            constructor(){
+                this.name = "Mohan";
+                this.email = "mohan@gmail.com";
+                document.write(`<h3>Constructor method</h3>`)
+            }
+
+            display(){
+                //method
+                document.write(`<h3>  name is = ${this.name} </h3>`)
+            }
+            print(){
+                document.write(`<h3>  email is = ${this.email} </h3>`)
+            }
+        }
+
+        let x = new User();
+        document.write(`<h3>  name = ${x.name} </h3>`)
+        document.write(`<h3>  email = ${x.email} </h3>`)
+        document.write(`<hr>`)
+        x.display();
+        x.print();
+
+    </script>
+</body>
+</html>

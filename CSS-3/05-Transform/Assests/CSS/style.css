@@ -1,0 +1,74 @@
+/* p1.html code */
+
+section{
+    padding: 20px;
+    margin: 20px;
+    height: 100px;
+    width: 400px;
+    box-shadow: -3px -3px 3px #ccc, 3px 3px 3px #ccc;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.translate:hover{
+    transform: translate(100px, 100px);
+}
+
+.translatex:hover{
+    transform: translateX(100px);
+}
+
+.translatey:hover{
+    transform: translateY(100px);
+}
+
+/* p2.html */
+/* it tttakes number and % */
+.scale:hover{
+    transform: scale(1.1,2.1);
+    /* transform: scale(2%,2); */
+}
+
+.scalex:hover{
+    transform: scaleX(2);
+}
+
+.scaley:hover{
+    transform: scaleY(2);
+}
+
+/* p3.html code */
+
+.rotate:hover{
+    transform: rotate(45deg);
+}
+.rotatex:hover{
+    transform: rotateX(180deg);
+}
+.rotatey:hover{
+    transform: rotateY(180deg);
+}
+
+/* p4.html */
+
+.skew:hover{
+    transform: skew(30deg, 20deg);
+}
+
+.skewx:hover{
+    transform: skewX(20deg);
+}
+
+.skewy:hover{
+    transform: skewY(20deg);
+}
+
+/* p5.html code */
+
+.matrix1:hover{
+    transform: matrix(2,0,0,2,120,300);
+}
+
+.matrix2:hover{
+    transform: matrix(1,2,-1,1,80,80);
+}

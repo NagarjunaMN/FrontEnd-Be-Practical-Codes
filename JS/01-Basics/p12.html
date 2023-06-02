@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h1>Type Conversion..!</h1>
+    </center>
+    <script>
+        document.write("3" - 2 +"<br>") //outputs : 1
+        document.write("3" + 2 +"<br>") //outputs : "32" (because + is also a concatenation operator)
+        document.write(3 + "2" +"<br>") //outputs : "32"
+        document.write("3" * "2" +"<br>") //outputs : "6"
+        document.write("3" * 2 +"<br>") //outputs : "6"
+        document.write(3 * "2" +"<br>") //outputs : "6"
+        document.write("10" / "2" +"<br>") //outputs : "5"
+        document.write(+"3" + 2 +"<br>") //outputs : "5"
+
+        document.write("<h1>Converting values to numbers</h1>")
+        let str = "123";
+        document.write(typeof(str) + "<br>") //outputs string
+        let num = Number(str) //Becomes a number
+        document.write(typeof(num) + "<br>") //outputs number
+
+        let number1 = Number("10.5") //Becomes a number
+        document.write(typeof(number1) + "<br>") //outputs number
+
+        let x = "123.343";
+        var a = Number(x) //converts to any type into number
+        document.write(`<h3>Number = ${a}</h3>`)
+
+        var a1 = parseInt(a) //converts to whole number
+        document.write(`<h3>Number = ${a1}</h3>`)
+
+        var a2 = parseFloat(a) //converts to deciimal number
+        document.write(`<h3>Float Number = ${a2}</h3>`)
+        
+
+        let y = 12345.685785465
+        document.write(`<h3>Y variable value is  = ${y}</h3>`)
+        document.write(`<h3>Y variable value is  = ${y.toFixed()}</h3>`)//rounds off the number
+        document.write(`<h3>Y variable value is  = ${y.toFixed(1)}</h3>`)
+        document.write(`<h3>Y variable value is  = ${y.toFixed(2)}</h3>`)
+        document.write(`<h3>Y variable value is  = ${y.toFixed(3)}</h3>`)
+        document.write(`<h3>Y variable value is  = ${y.toFixed(4)}</h3>`)
+
+        
+        document.write(`<h3>The Number constructor conversion : ${Number(true)} </h3>`) //returns 1
+        document.write(`<h3>The Number constructor conversion : ${Number(false)} </h3>`) //returns 0
+        document.write(`<h3>The Number constructor conversion : ${Number(null)} </h3>`) //returns 0
+        document.write(`<h3>The Number constructor conversion : ${Number(" 123 ")} </h3>`) //returns 123
+        document.write(`<h3>The Number constructor conversion : ${Number(" ")} </h3>`) //returns 0
+        document.write(`<h3>The Number constructor conversion : ${Number("")} </h3>`) //returns 0
+        document.write(`<h3>The Number constructor conversion : ${Number("123e-1")} </h3>`) //returns 12.3
+        document.write(`<h3>The Number constructor conversion : ${Number("0xFF")} </h3>`) //returns 255 (hexa deccimal representation)
+        document.write(`<h3>The Number constructor conversion : ${Number("undefined")} </h3>`) //returns NaN
+        document.write(`<h3>The Number constructor conversion : ${Number("null")} </h3>`) //returns NaN
+        document.write(`<h3>The Number constructor conversion : ${Number("Hello World")} </h3>`) //returns NaN
+    </script>
+
+    <script>
+        document.write("<h1>Converting values to Strings</h1>")
+        var bool = true;
+        document.write(typeof bool+"<br>") //outputs: boolean
+
+        var strr = String(bool);
+        document.write(typeof(strr)+"<br>") //outputs: string
+
+        var str1 = String(10.5);
+        document.write("<p><b>str1</b></p>"+str1)
+        document.write("<p><b>str1</b></p>"+typeof(str1));
+        
+        document.write(`<h3>The String constructor conversion : ${String(123)} </h3>`) // returns "123"
+        document.write(`<h3>The String constructor conversion : ${String(100+23)} </h3>`) // returns "123"
+        document.write(`<h3>The String constructor conversion : ${String(true)} </h3>`) // returns "true"
+        document.write(`<h3>The String constructor conversion : ${String(false)} </h3>`) // returns "false"
+        document.write(`<h3>The String constructor conversion : ${String(123e-1)} </h3>`) // returns "12.3"
+        document.write(`<h3>The String constructor conversion : ${String(0xFF)} </h3>`) // returns "255"
+        document.write(`<h3>The String constructor conversion : ${String(undefined)} </h3>`) // returns "undefined"
+        document.write(`<h3>The String constructor conversion : ${String(null)} </h3>`) // returns "null"
+
+    </script>
+    
+    <script>
+        document.write("<h1>Converting values to Boolean</h1>")
+
+        document.write(`<h3>The Boolean constructor conversion : ${Boolean(0)} </h3>`)  //returns false
+        document.write(`<h3>The Boolean constructor conversion : ${Boolean(null)} </h3>`)  //returns false
+        document.write(`<h3>The Boolean constructor conversion : ${Boolean(false)} </h3>`)  //returns false
+        document.write(`<h3>The Boolean constructor conversion : ${Boolean(undefined)} </h3>`)  //returns false
+        document.write(`<h3>The Boolean constructor conversion : ${Boolean(NaN)} </h3>`)  //returns false
+        document.write(`<h3>The Boolean constructor conversion : ${Boolean("")} </h3>`)  //returns false
+        document.write(`<h3>The Boolean constructor conversion : ${Boolean(" ")} </h3>`)  //returns false
+        document.write(`<h3>The Boolean constructor conversion : ${Boolean(1)} </h3>`)  //returns true
+        document.write(`<h3>The Boolean constructor conversion : ${Boolean(true)} </h3>`)  //returns true
+    </script>
+
+    <script>
+        document.write("<h1>Type conversion using operators</h1>")
+        let x1 = "10" // x is a string
+        let y1 = +x1;
+        document.write(`<h3>Conversion using Operator : ${typeof(y1)}</h3>`) //outputs Number
+        document.write(`<h3>Conversion using Operator : ${y1}</h3>`) //outputs 10
+
+        let x2 = 10 // x is a Number
+        let y2 = x2 + "";
+        document.write(`<h3>Conversion using Operator : ${typeof(y2)}</h3>`) //outputs string
+        document.write(`<h3>Conversion using Operator : ${y2}</h3>`) //outputs '10'
+
+        let x3 = "15" // x3 is a string
+        let y3 = x3 - 0;
+        document.write(`<h3>Conversion using Operator : ${typeof(y3)}</h3>`) //outputs Number
+        document.write(`<h3>Conversion using Operator : ${y3}</h3>`) //outputs 15
+    </script>
+</body>
+</html>

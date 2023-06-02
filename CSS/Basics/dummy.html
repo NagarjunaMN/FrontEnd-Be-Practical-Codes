@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: lightcoral;
+        }
+        
+        [name]{
+            background-color: rgba(0, 0, 255,1);
+        }
+
+       
+        .styl+h1{
+            background-color: white;
+        }
+        table,table tr, table th ,  table td{
+            border: 2px solid crimson;
+            padding: 10px;
+            /* border-collapse: collapse; */
+            empty-cells: hide;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <div class="styl">
+        <h1 id="ids" class="cls" name="nme">You maan hows it going</h1>
+    </div>
+    <h1>Adjacent selector means next directly to selected element</h1>
+    <h1>See Not this one</h1>
+    <table>
+        <tr>
+            <th>hi</th>
+            <th>Yo</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>you to you</td>
+        </tr>
+        <tr>
+            <td>hi 2 u</td>
+            <td>yo 2 u</td>
+        </tr>
+        <tr>
+            <td>hi 2 u</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

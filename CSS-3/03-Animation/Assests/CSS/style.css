@@ -1,0 +1,88 @@
+.commonAnimation{
+    padding: 20px;
+    border-radius: 5px;
+    margin: 30px;
+    height: 300px;
+}
+/* p1.html code  */
+.animation1{
+    background: #fc4668;
+    /* animation: be-pactical;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; */
+    animation: be-practical 10s infinite;
+}
+
+.animation1>h1, .animation2>h1, .animation3>h1{
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000;
+}
+
+@keyframes be-practical {
+    /* from{background:blue}
+    to{background:red} */
+    from{background: linear-gradient(to right, #0f2027, #203a43, #2c5364);}
+    to{ background: linear-gradient(to right, #da4453, #89216b);}
+}
+
+.animation1:hover{
+    background-color: blue;
+    /* it will not work when animation is working */
+}
+
+/* p2.html code */
+.animation2{
+    background: url(../Images/Large.jpg) no-repeat center;
+    background-size: 100%;
+    animation: animation_image 10s infinite;
+}
+
+@keyframes animation_image {
+    /* from{background: url(../Images/Large.jpg) no-repeat top; color: red;}
+    to{background: url(../Images/Large.jpg) no-repeat bottom; color: green;} */
+    from{background: url(../Images/Large.jpg) no-repeat top; color: red;}
+    to{background: url(../Images/medium.jpg) no-repeat bottom; color: green;}
+}
+
+/* p3.html code */
+
+
+.animation3{
+    background: #fc4668;
+    padding:20px;
+    margin:30px;
+    border-radius: 5px;
+    position: absolute;
+    animation: cssAnimation3 10s infinite;
+
+}
+
+@keyframes cssAnimation3 {
+    0%{
+        top: 0px;
+        left: 0px;
+        background:#fc4668;
+    }
+    25%{
+        top: 0px;
+        left: 600px;
+        background:cadetblue;
+    }
+    50%{
+        top: 400px;
+        left: 600px;
+        background:chartreuse;
+    }
+    75%{
+        top: 400px;
+        left: 0px;
+        background:teal;
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+        background:#fc4668;
+    }
+}

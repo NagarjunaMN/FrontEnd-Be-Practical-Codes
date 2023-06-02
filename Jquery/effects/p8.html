@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {overflow-x: hidden;}
+        #slide, #txt {
+            width: 100%;
+            padding:20px;
+            background-color: crimson;
+            color:#fff;
+            cursor: pointer;
+        }
+        
+        #slide{ text-align: center; }
+    </style>
+</head>
+<body>
+    <h3>slideup()</h3>
+
+    <div id="slide">Click on me to slide up</div>
+    <div id="txt">
+        <h3>Sample heading</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam ex fuga veritatis obcaecati consequuntur officia rem repellendus natus eligendi accusantium nihil, dolore nulla excepturi minus, dicta quidem sed ea quia!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus vel a corporis accusamus pariatur praesentium inventore eligendi repellendus laborum, libero esse molestiae deserunt aperiam autem dignissimos fuga voluptas nulla eaque!</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            // statements
+            $("#slide").click(function () {
+                $('#txt').slideUp(3000);
+            });
+        });
+    </script>
+</body>
+</html>

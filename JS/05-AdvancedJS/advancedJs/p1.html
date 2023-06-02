@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Anonymous Callbacks function</h3>
+    <script>
+        //self constructor
+        //refresh onload
+        (function () {
+            document.write(`<h1> self constructor called </h1>`);
+            setTimeout(function () {
+                alert("Welcome to self constructor")
+            },5000)
+        })();
+    </script>
+</body>
+</html>
+
+
+
+<!-- p2.html is same as p11.html outside
+    p3.html is same as p12.html outside
+    p4.html is same as p13.html outside
+-->

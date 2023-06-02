@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>getter and setters</h3>
+    
+    <script>
+        //super class
+        class Person {
+            
+            constructor(){
+                this.email =''; //will not used to call
+            }
+       
+            //get to return the value
+            get email(){
+               return ` My  email is = ${this._mail} `; //_mail =>alias property to email
+            }
+
+            //set to assign the value
+            set email(x){
+                this._mail = x
+            }
+        }
+
+        let x = new Person()
+        console.log("x =>",x)
+        x.email = "Mahindra@gmail.com"; //setter method
+        document.write(`<h1>${x.email}</h1>`)
+        
+    </script>
+</body>
+</html>

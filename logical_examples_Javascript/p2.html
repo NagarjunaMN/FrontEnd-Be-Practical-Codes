@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sort the 3 numbers in Ascending order using conditional statements</h1>
+    <script>
+        let a = 2;
+        let b = -1;
+        let c = 0;
+
+        if (a < b && a < c) {
+            if (b < c) {
+                document.write(`<h1>${a} ${b} ${c}</h1>`)
+            }else{
+                document.write(`<h1>${a} ${c} ${b}</h1>`)
+            }
+        }else if(b < a && b < c){
+            if (a < c) {
+                document.write(`<h1>${b} ${a} ${c}</h1>`)
+            }else{
+                document.write(`<h1>${b} ${c} ${a}</h1>`)
+            }
+        }else{
+            document.write(c)
+            if(a < b){
+                document.write(`<h1>${c} ${a} ${b}</h1>`)
+            }else{
+                document.write(`<h1>${c} ${b} ${a}</h1>`)
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-BASICS</title>
+    <style>
+        h3{
+            background-color: burlywood;
+            color: lightgray;
+            padding: 20px;
+        }
+        #ramesh{
+            background-color: aquamarine;
+        }
+        #suresh{
+            background-color: brown;
+        }
+        #naresh{
+            background-color: blue;
+        }
+        div.cssDemoClass{
+            background-color: coral;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        [href]{
+            background-color: skyblue;
+            color: white;
+            padding: 20px;
+            text-decoration: none;
+        }
+        [href="p2.html"]{
+            background-color: grey;
+        }
+        [href="p5.html"]{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to declare a CSS..?</h1>
+    <ol>
+        <li>Inline CSS (Using Style attribute)</li>
+        <li>Internal CSS (Using Style tag)</li>
+        <li>External CSS (Using .css extension)</li>
+    </ol>
+
+    <hr>
+
+    <h1>Inline CSS (Using Style attribute) Example</h1>
+    <h2 style="background-color: grey; color: lightgray;">THIS IS HEAD TAG..!</h2>
+    <h2 style="background-color: grey; color: lightgray;">THIS IS HEAD TAG..!</h2>
+    <h2 style="background-color: teal; color: lightgray;">THIS IS HEAD TAG..!</h2>
+
+    <!-- we cannot reuse the code using inline css as it has to be rewriten again for another element -->
+
+    <hr>
+
+    <h1>Internal CSS (Using style tag) Example..!</h1>
+    <hr>
+    <h3>CSS Selector (How to call an element under style tag..!)</h3>
+    <ol>
+        <li>Using an Element name</li>
+        <li>Using an Element ID</li>
+        <li>Using class</li>
+        <li>Using an Attribute</li>
+        <li>Using Attribute and its value</li>
+    </ol>
+    <hr>
+    <h1>Using an Element name Example</h1>
+    <hr>
+    <h3>This is Internal Css Example..!</h3>
+    <h3>This is Internal Css Example..!</h3>
+    <h3>This is Internal Css Example..!</h3>
+
+    <hr>
+
+    <h1>Using an Element ID Example</h1>
+    <hr>
+
+    <h3 id="ramesh">This is Internal Css Example..!</h3>
+    <h3 id="suresh">This is Internal Css Example..!</h3>
+    <h3 id="naresh">This is Internal Css Example..!</h3>
+
+    <hr>
+    <h1>Using Class Example..!</h1>
+    <hr>
+    <section class="cssDemoClass">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quibusdam perspiciatis optio quaerat mollitia sequi aliquam architecto laudantium officiis, neque ut obcaecati, a velit atque id expedita hic! Libero, animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis reiciendis, nam esse iure dolorem, sunt dicta nihil reprehenderit aspernatur ex excepturi atque, unde tempore. Distinctio officia ab omnis provident magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci possimus ipsam molestias reprehenderit facilis totam officia non! Alias vitae cum reprehenderit, explicabo molestiae doloribus at, similique veritatis commodi fugit voluptatibus!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quibusdam perspiciatis optio quaerat mollitia sequi aliquam architecto laudantium officiis, neque ut obcaecati, a velit atque id expedita hic! Libero, animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis reiciendis, nam esse iure dolorem, sunt dicta nihil reprehenderit aspernatur ex excepturi atque, unde tempore. Distinctio officia ab omnis provident magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci possimus ipsam molestias reprehenderit facilis totam officia non! Alias vitae cum reprehenderit, explicabo molestiae doloribus at, similique veritatis commodi fugit voluptatibus!</p>
+    </section>
+    <div class="cssDemoClass">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quibusdam perspiciatis optio quaerat mollitia sequi aliquam architecto laudantium officiis, neque ut obcaecati, a velit atque id expedita hic! Libero, animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis reiciendis, nam esse iure dolorem, sunt dicta nihil reprehenderit aspernatur ex excepturi atque, unde tempore. Distinctio officia ab omnis provident magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci possimus ipsam molestias reprehenderit facilis totam officia non! Alias vitae cum reprehenderit, explicabo molestiae doloribus at, similique veritatis commodi fugit voluptatibus!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quibusdam perspiciatis optio quaerat mollitia sequi aliquam architecto laudantium officiis, neque ut obcaecati, a velit atque id expedita hic! Libero, animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis reiciendis, nam esse iure dolorem, sunt dicta nihil reprehenderit aspernatur ex excepturi atque, unde tempore. Distinctio officia ab omnis provident magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci possimus ipsam molestias reprehenderit facilis totam officia non! Alias vitae cum reprehenderit, explicabo molestiae doloribus at, similique veritatis commodi fugit voluptatibus!</p>
+    </div>
+    <section class="cssDemoClass">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quibusdam perspiciatis optio quaerat mollitia sequi aliquam architecto laudantium officiis, neque ut obcaecati, a velit atque id expedita hic! Libero, animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis reiciendis, nam esse iure dolorem, sunt dicta nihil reprehenderit aspernatur ex excepturi atque, unde tempore. Distinctio officia ab omnis provident magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci possimus ipsam molestias reprehenderit facilis totam officia non! Alias vitae cum reprehenderit, explicabo molestiae doloribus at, similique veritatis commodi fugit voluptatibus!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quibusdam perspiciatis optio quaerat mollitia sequi aliquam architecto laudantium officiis, neque ut obcaecati, a velit atque id expedita hic! Libero, animi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis reiciendis, nam esse iure dolorem, sunt dicta nihil reprehenderit aspernatur ex excepturi atque, unde tempore. Distinctio officia ab omnis provident magni. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci possimus ipsam molestias reprehenderit facilis totam officia non! Alias vitae cum reprehenderit, explicabo molestiae doloribus at, similique veritatis commodi fugit voluptatibus!</p>
+    </section>
+
+    <hr>
+    <h1>Using an Attribute Example..!</h1>
+    <hr>
+
+    <a href="#">Anchor Tag -1</a>
+
+    <hr>
+    <h1>Using an Attribute and Its value Example..!</h1>
+    <hr>
+
+    <a href="p2.html">Anchor Tag -2</a>
+    <a href="p5.html">Anchor Tag -3</a>
+
+
+</body>
+</html>

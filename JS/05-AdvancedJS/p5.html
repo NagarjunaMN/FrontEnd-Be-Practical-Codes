@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Listener</title>
+</head>
+<body>
+    <center>
+        <h1>REMOVE EVENT LISTENER</h1>
+        <p>Removing Event-Listener </p>
+    </center>
+    <hr>
+    <button type="button" id="mybtn">Click me</button>
+
+    <script>
+         // Selecting button element
+        let btn = document.getElementById('mybtn');
+
+        
+        // defining function
+        function greetWorld() {
+            alert("Hello World");
+        }
+        // Attaching event listener
+        btn.addEventListener('click', greetWorld);
+
+        // Removing event listener
+        btn.removeEventListener('click', greetWorld)
+    
+    </script>
+</body>
+</html>

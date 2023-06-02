@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    <center>
+        <h1>Window</h1>
+    </center>
+    <hr>
+
+    <script>
+        let number = 100 //Global variable or window.number
+
+        function whoisThis(){
+            let number = 200;
+            let number2 = 500;
+            window.num3 = 300;
+
+            document.write("Local Variable : "+number+"<br>");
+            document.write("Global Variable : "+this.number+"<br>");
+            document.write("Global Variable : "+num3+"<br>");
+        }
+        whoisThis();
+        function another(){
+            document.write("Global variable in another function "+ num3)
+        }
+        another()
+    </script>
+</body>
+</html>

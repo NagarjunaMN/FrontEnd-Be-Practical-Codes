@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Default parameters in function (to avoid NAN)</h3>
+    <script>
+        function sum(a,b) {
+            document.write(`<h3> Sum is = ${a+b} </h3>`)
+        }
+        sum(10,20) //30
+        sum(10) //NaN
+    </script>
+    <script>
+        function mul(a,b=2,c=3) {
+            document.write(`<h3> Product is = ${a*b*c} </h3>`)
+        }
+        mul(10,4,5)
+        mul(10,4)
+        mul(10)
+    </script>
+</body>
+</html>
+
+
+
+
+

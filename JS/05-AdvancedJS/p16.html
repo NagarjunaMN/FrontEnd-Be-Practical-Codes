@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+    <style>
+        section{
+            width: 100%;
+            overflow-x: hidden;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            grid-gap: 10px;
+        }
+        article{
+            background-color: crimson;
+            padding: 5px;
+            color: #eee;
+        }
+        article h4{
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Hoisting..!</h1>
+    </center>
+    <hr>
+
+    <h2>Function Hoisting</h2>
+
+    <script>
+        //calling function before declaration
+        sayHello() //outputs: Say Hello Function
+        function sayHello(data) {
+           document.write("<h1>Say Hello Function</h1>");
+        }
+    </script>
+
+    <h2>Variable Hoisting</h2>
+    <script>
+        str = "Hello World!";
+        alert(str); // outputs : "Hello world!"
+        var str;
+
+        alert(str1);
+        var str1;
+        str1 = "Hello World!";
+
+        var x =5; //Declare and initialize x
+        var y; // Declare y
+        alert(x + ", " + y); //outputs: 5, undefined
+        y = 10; //initialize y
+
+        var a = 3; //Declare and initialize a
+        b = 6 // initialize b
+        alert(a + ", " + b); // outputs: 3, 6
+        var b; //Declare b
+    </script>
+</body>
+</html>

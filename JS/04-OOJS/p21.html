@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object.entries() </h1>
+    <script>
+        //it returns an array of object properties
+        var user = {
+            name: "Raj",
+            email : "raj@gmail.com",
+            mobile : 7898751525,
+            age : 25
+        };
+        
+        console.log("object = ",user)
+        console.log("entries = ",Object.entries(user)) //array[key,value]
+
+        var res = Object.entries(user);
+        for (const [key,value] of res) {
+            console.log(` ${key} : ${value} `)
+            document.write(`<h3> ${key} : ${value} </h3>`)
+        }
+        
+    </script>
+</body>
+</html>

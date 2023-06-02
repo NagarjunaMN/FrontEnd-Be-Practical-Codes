@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exception (runtime errors) handling using try and catch block</h1>
+    <script>
+        const x = 33;
+        console.log("Before constant", x)
+        try {
+            //drop the runtime error code statement
+            x=50;
+        } catch (error) {
+            console.log(error)
+        }
+        console.log("after const =",x)
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .blk {
+            width:50%;
+            padding:30px;
+            background-color: #222;
+            color: #fff;
+             margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h3>mouseleave and mouseover</h3>
+    <h3>mouseup and mousedown</h3>
+    <h3>mouseenter and mouseout</h3>
+
+    <div class="blk">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis repellendus dolor neque, quod pariatur facilis enim corporis sit. Molestiae accusamus eius, vitae quod voluptatem ratione quaerat officiis labore adipisci quasi.</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            // statements
+            $(".blk").mouseenter(function () {
+                $(this).css("background-color", "gold");
+            });
+
+            $('.blk').mouseout(function () {
+                $(this).css("background-color", "slateblue");
+            });
+        });
+    </script>
+</body>
+</html>

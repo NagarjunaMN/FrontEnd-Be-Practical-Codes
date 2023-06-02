@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reversing String using loop</h1>
+    <script>
+        var x = "Welcome to Javascript"
+        console.log('before =',x);
+
+        function reverse(inp) {
+            let reverse = '';
+            let y = inp.split("")
+            console.log(y)
+            // for (let i = y.length-1; i >= 0; i--) {
+            //     reverse = reverse+y[i]
+            //     console.log("reverse",reverse)
+            // }
+
+            let i = y.length-1;
+            // while(i >= 0){
+            //     reverse = reverse+y[i];
+            //     i--;
+            // }
+
+            do {
+                reverse = reverse+y[i];
+                i--;
+            } while (i >= 0);
+            
+            return reverse
+        }
+        
+        console.log('after =',reverse(x));
+    // using loop
+    // program to reverse vowels
+    // reversing the words
+    // find the entered is prime number or not 
+    // 122,44,566,777,888,22,567 sum of these numbers using loop
+
+    </script>
+<h1>Program to reverse vowels</h1>
+    <script>
+        let v = "aeiou";
+        let reverseVowels = '';
+        let y = v.split("")
+        console.log(y)
+        for (let i = y.length-1; i >= 0; i--) {
+            reverseVowels = reverseVowels+y[i]
+            console.log("reverse vowels",reverseVowels)
+        }
+        document.write("reverse aeiou vowels  = "+reverseVowels)
+    </script>
+
+<h1>Program to reverse words</h1>
+    <script>
+        let w = "hello world welcome to javascript";
+        let reversewords = '';
+        let split = w.split(" ")
+        for (let i = split.length-1; i >= 0; i--) {
+            reversewords = reversewords+split[i]+" "
+            console.log("reverse Words",reversewords)
+        }
+        document.write("reverse Words for 'hello world welcome to javascript' => "+reversewords)
+    </script>
+
+<h1>Program to  find the entered is prime number or not </h1>
+<form action="">
+    <div class="prime">
+        <label for="prime">Enter the number to check if it is prime</label>
+        <input type="text" name="nrime" id="prime" onkeyup="checkPrime()"><br><br>
+        
+    </div>
+    <p id="out"></p>
+</form>
+<script>
+    function checkPrime() {
+        document.getElementById("out").innerHTML = ''
+        let input = parseInt(document.getElementById('prime').value);
+        for (let i = 2; i < input; i++) {
+            if(input%i == 0){
+            document.getElementById("out").innerHTML = "The value is not Prime"
+            break
+            }else{
+            document.getElementById("out").innerHTML = "The value is Prime"
+            }
+        }
+        
+    }
+</script>
+
+<h1>Program to check sum of the numbers</h1>
+<script>
+    let numbers = "122,44,566,777,888,22,567";
+    let splitnum = numbers.split(",")
+    let sum = 0 ;
+        for (let i = 0; i < splitnum.length ; i++) {
+            sum = sum+ parseInt(splitnum[i])
+            console.log("reverse Words",sum)
+        }
+        document.write("sum of all the numbers are "+sum)
+</script>
+</body>
+</html>

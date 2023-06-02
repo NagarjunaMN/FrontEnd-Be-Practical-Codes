@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Marquee tag</title>
+    </head>
+    <body>
+        <center>
+            <h1>Marquee Tag</h1>
+        </center>
+
+        <marquee>This is a Marquee tag 1..!</marquee>
+        <marquee><a href="#">This is a Marquee tag 2..!</a></marquee>
+        <marquee bgcolor="teal">This is a Marquee tag 3..!</marquee>
+        <br><hr><br>
+
+
+
+        <h2>Behaviour attribute which gives the type of marquee tag</h2>
+        <marquee behavior="alternate" bgcolor="skyblue">THIS IS AN ALTERNATE MARQUEE TAG..!</marquee>
+        <br><br>
+        <marquee behavior="scroll" bgcolor="skyblue">THIS IS AN SCROLL MARQUEE TAG..!</marquee>
+        <br><br>
+        <marquee behavior="slide" bgcolor="skyblue">THIS IS AN SLIDE MARQUEE TAG..!</marquee>
+
+        <!-- alternate behaviour shows the text from right to left and it bounces from left to right
+        scroll - the default behaviour are scroll behaviour which shows text from right to left
+    slide - it slides from right to left and stops it only slides one time  -->
+        <br><br> <hr>
+
+
+
+        <h2>Direction attribute which says which direction the tag should follow</h2>
+        <marquee  direction="right" bgcolor="teal">THIS IS A RIGHT DIRECTION MARQUEE TAG..! it travels from left to right..!</marquee>
+        <br><br>
+        <marquee  direction="left" bgcolor="teal">THIS IS A LEFT DIRECTION MARQUEE TAG..!it travels from right to left</marquee>
+        <br><br>
+        <marquee  direction="up" bgcolor="teal" height ="100">THIS IS A UP DIRECTION MARQUEE TAG..! it travels from down to up</marquee>
+        <br><br>
+        <marquee  direction="down" bgcolor="teal" height ="100">THIS IS A DOWN DIRECTION MARQUEE TAG..! it travels from up to down</marquee>
+        <br><br> <hr>
+
+
+
+        <marquee  bgcolor="skyblue" scrollamount="1">THIS IS A MARQUEE TAG..!</marquee>
+        <br><br>
+        <marquee  bgcolor="skyblue" scrollamount="20" id="test">THIS IS A MARQUEE TAG..!</marquee>
+        <br><br>
+        <marquee  bgcolor="skyblue" scrollamount="10">THIS IS A MARQUEE TAG..!</marquee>
+        <br><br>
+        <marquee  bgcolor="skyblue" scrollamount="5">THIS IS A MARQUEE TAG..!</marquee>
+        <!-- Scroll amount shows the speed of the scrolling -->
+        <br><br>
+        <script>
+            document.getElementById('test').onmousemove = function(){
+                document.getElementById('test').stop();
+            }
+            document.getElementById('test').onmouseleave = function(){
+                document.getElementById('test').start();
+            }
+        </script>
+        <!-- you can change the behaviour of the marquee tag by stopping it on mouse hover and on leaving the mouse cursor it starts the scrolling-->
+
+    </body>
+</html>

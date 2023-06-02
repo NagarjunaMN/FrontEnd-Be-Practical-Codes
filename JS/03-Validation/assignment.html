@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+   <!-- <link rel="stylesheet" href="assests/CSS/style.css"> -->
+   <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .container{
+            display: flex;
+            flex-flow: row wrap;
+            gap: 20px;
+            
+        }
+
+        .justify-content-center{
+            justify-content: center;
+        }
+        .validForm{
+            flex-flow: column wrap;
+            padding: 10px;
+            margin: 20px;  
+            text-align: center;
+            background-color: burlywood;
+            color: brown;
+            width: 500px;
+        }
+
+        .validForm>div>label,.validForm>div>p{
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+        .width>input,.width>select{
+            width: 200px;
+            height: 20px;
+        }
+        .space>label{
+            margin-right: 10px;
+        }
+        .validForm>div>strong{
+            padding-top : 10px;
+            display: block;
+        }
+        .validForm>div>button{
+            padding: 8px 30px;
+            margin: 2px;
+            color: brown;
+        }
+
+   </style>
+</head>
+<body>
+    <div class="container justify-content-center">
+        <form class="validForm container" autocomplete="off" onsubmit="validate(event)" onreset="resetData(event)" novalidate>
+            <h1>Contact Form</h1>
+            <div  class="width">
+                <p for="user">Username</p>
+                <input type="text" name="user" id="user">
+                <strong id="nameMessage"></strong>
+            </div>
+        
+            <div class="width">
+                <p for="email">Email Id</p>
+                <input type="email" name="email" id="email">
+                <strong id="emailMessage"></strong>
+            </div>
+            
+            <div class="width">
+                <p for="mobile">Mobile Number</p>
+                <input type="number" name="mobile" id="mobile" maxlength="10">
+                <strong id="mobileMessage"></strong>
+            </div>
+            
+            <div class="width">
+                <p for="checklist">City</p>
+                <select name="city" id="city">
+                    <option value="">Choose City Name</option>
+                    <option value="Bengaluru">Bengaluru</option>
+                    <option value="Mysuru">Mysuru</option>
+                    <option value="Bellary">Bellary</option>
+                    <option value="Mangalore">Mangalore</option>
+                    <option value="Belagavi">Belagavi</option>
+                </select>
+                <strong id="cityMessage"></strong>
+            </div>
+        
+            <div class="space">
+                <p>Gender</p>
+                <input type="radio" name="gender" id="male" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="Female">
+                <label for="female">Female</label>
+                <strong id="genderMessage"></strong>
+            </div>
+            
+            <div class="space">
+                <p>Languages (optional)</p>
+                <input type="checkbox" name="languages"  id="kannada" value="Kannada">
+                <label for="">Kannada</label>
+                <input type="checkbox" name="languages" id="hindi" value="Hindi">
+                <label for="">Hindi</label>  
+                <input type="checkbox" name="languages" id="telugu" value="Telugu">
+                <label for="">Telugu</label> 
+                <input type="checkbox" name="languages" id="tamil" value="Tamil">
+                <label for="">Tamil</label>  
+                <input type="checkbox" name="languages" id="english" value="English">
+                <label for="">English</label>
+                <strong id="langMessage"></strong>
+            </div>
+            
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <script>
+        function validate(event) {
+            event.preventDefault();
+
+            let user = document.getElementById('user').value;
+            let nameMessage = document.getElementById('nameMessage');
+
+            let email = document.getElementById('email').value;
+            let emailMessage = document.getElementById('emailMessage');
+            
+            let mobile = document.getElementById('mobile').value;
+            let mobileMessage = document.getElementById('mobileMessage');
+
+            let city = document.getElementById('city').value;
+            let cityMessage = document.getElementById('cityMessage');
+            
+
+            let gender = document.getElementsByName('gender');
+            let genderMessage = document.getElementById('genderMessage');
+
+            let languages = document.getElementsByName('languages');
+            let langMessage = document.getElementById('langMessage');
+            
+            
+            
+            
+// -------------------For  Username -------------------------------------
+            if(user.length == 0 ){
+                nameMessage.innerHTML = "Enter User Name";
+                nameMessage.style.color = "red"
+            }else if(user.length <= 5){
+                    nameMessage.innerHTML = "User input length must be greater than 5 characters";
+                    nameMessage.style.color = "red"           
+            }else {
+                nameMessage.innerHTML = "Valid User Name";
+                nameMessage.style.color = "green"
+            }
+ //----------------------------------------------------------------------------
+ 
+//  --------------------for Email Id -------------------------------------------
+            let emailregex = /^\S+@\S+\.\S+$/;
+            if(email == ''){
+                emailMessage.innerHTML = "Email field must be filled";
+                emailMessage.style.color = "red"
+            }else{
+                if(emailregex.test(email) === false){
+                    emailMessage.innerHTML = "invalid Email Id";
+                    emailMessage.style.color = "red"
+                }else{
+                    emailMessage.innerHTML = "Valid Email Id";
+                    emailMessage.style.color = "green"
+                }
+            }
+ //----------------------------------------------------------------------------
+
+ //  --------------------for Mobile number -------------------------------------------
+  
+            let mobileregex = /^[6-9]\d{9}$/;
+            if(mobile == ''){
+                mobileMessage.innerHTML = "Mobile field must be filled";
+                mobileMessage.style.color = "red"
+            }else{
+                if(mobileregex.test(mobile) === false){
+                    mobileMessage.innerHTML = "invalid Indian mobile number";
+                    mobileMessage.style.color = "red"
+                }else{
+                    mobileMessage.innerHTML = "Valid Indian mobile number";
+                    mobileMessage.style.color = "green"
+                }
+            }
+
+ //----------------------------------------------------------------------------
+ 
+//  --------------------for City checklist -------------------------------------------
+  
+            if(city == ''){
+                cityMessage.innerHTML = "Select a City"
+                cityMessage.style.color = "red"
+            }else {
+                cityMessage.innerHTML = `You have selected ${city}`
+                cityMessage.style.color = "green"
+            }
+
+            
+ //----------------------------------------------------------------------------
+ 
+//  --------------------for Gender checking -------------------------------------------
+  
+            if (gender[0].checked == false && gender[1].checked == false){
+                genderMessage.innerText = "Select an option"
+                genderMessage.style.color = 'red';
+            }else if (gender[0].checked == true){
+                genderMessage.innerHTML = "You have selected Male"
+                genderMessage.style.color = "green"
+            }else if (gender[1].checked == true){
+                genderMessage.innerHTML = "You have selected Female"
+                genderMessage.style.color = "green"
+            }
+ //----------------------------------------------------------------------------
+ 
+//  --------------------for Language checking -------------------------------------------
+            // if (languages[0].checked == false && languages[1].checked == false && languages[2].checked == false && languages[3].checked == false && languages[4].checked == false){
+            //     langMessage.innerText = "Select atleast one Language"
+            //     langMessage.style.color = 'red';
+            // }else if (languages[0].checked == true){
+            //     langMessage.innerHTML = "You have selected Kannada"
+            //     langMessage.style.color = "green"
+            // }else if (languages[1].checked == true){
+            //     langMessage.innerHTML = "You have selected Hindi"
+            //     langMessage.style.color = "green"
+            // }else if (languages[2].checked == true){
+            //     langMessage.innerHTML = "You have selected Telugu"
+            //     langMessage.style.color = "green"
+            // }else if (languages[3].checked == true){
+            //     langMessage.innerHTML = "You have selected Tamil"
+            //     langMessage.style.color = "green"
+            // }else if (languages[4].checked == true){
+            //     langMessage.innerHTML = "You have selected English"
+            //     langMessage.style.color = "green"
+            // }
+            
+            let arr = []
+            for (let i = 0; i < languages.length; i++) {
+                const element = languages[i];
+                if (element.checked == true){
+                    arr[i]=element.value;
+                    // arr.push(element.value)  
+                }
+            } 
+            if (arr.length == 0){
+                langMessage.innerText = "Select at least one Language"
+                langMessage.style.color = 'red';
+            } else{
+                langMessage.innerText = `You have selected ${arr.toString()}`
+                langMessage.style.color = 'green';
+            }
+
+
+    }
+
+    function resetData() {
+        event.preventDefault()
+        
+        document.getElementById('user').value = "";
+        document.getElementById('nameMessage').innerText = "";
+
+        document.getElementById('email').value = "";
+        document.getElementById('emailMessage').innerText = "";
+        
+        document.getElementById('mobile').value = "";
+        document.getElementById('mobileMessage').innerText = "";
+
+        document.getElementById('city').value = "";
+        document.getElementById('cityMessage').innerText = "";
+        
+
+        document.getElementsByName('gender')[0].checked = false;
+        document.getElementsByName('gender')[1].checked = false;
+        document.getElementById('genderMessage').innerText = "";
+
+        document.getElementsByName('languages')[0].checked = false;
+        document.getElementsByName('languages')[1].checked = false;
+        document.getElementsByName('languages')[2].checked = false;
+        document.getElementsByName('languages')[3].checked = false;
+        document.getElementsByName('languages')[4].checked = false;
+        document.getElementById('langMessage').innerText = "";
+    }
+    </script>
+
+</body>
+</html>

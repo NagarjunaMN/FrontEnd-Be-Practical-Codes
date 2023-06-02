@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year Countdown</title>
+    <style>
+        .uploadVid>video{
+            background-size: contain;
+            width: 100% !important;
+        }
+        .container{
+            display: flex;
+            flex-flow: column wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            color: yellow;
+            font-weight: bolder;
+        }
+        #countdown{
+            display: flex;
+            flex-flow: row wrap;
+            font-size: 35px;
+        }
+        .box{
+            position: absolute;
+            bottom: 100px;
+            left: 32%;
+        }
+        .container>#countdown>.timer{
+            display: inline;
+            text-align: center;
+            flex: 1;
+            margin: 5px;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.6);    
+        }
+        .container>h1{
+            font-size: 55px;
+            color: white;
+        }
+        .container>h2{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="uploadVid">
+        <video src="assests/media/newyear.mp4" loop muted autoplay></video>
+    </div>
+    <div class="container box">
+        <h1>New Year Countdown</h1>
+        <div id="countdown">
+            <div class="timer">
+                <span id="days"></span>
+                <p>Days</p>
+            </div>
+            <div class="timer">
+                <span id="hours"></span>
+                <p>Hours</p>
+            </div>
+            <div class="timer">
+                <span id="minutes"></span>
+                <p>Minutes</p>
+            </div>
+            <div class="timer">
+                <span id="seconds"></span>
+                <p>Seconds</p>
+            </div>
+        </div>
+        <h2 id="newYearDate"></h2>
+    </div>
+
+    <script>
+        let days = document.getElementById("days")
+        let hours = document.getElementById("hours")
+        let minutes = document.getElementById("minutes")
+        let seconds = document.getElementById("seconds")
+        let nextNewYear = new Date("1/1/2024")
+        let newYearTiming = nextNewYear.getTime()
+
+        function addZero(num) {
+            if (num < 10) {
+                return "0"+num;
+            }else{
+                return num
+            }
+        }
+        document.getElementById("newYearDate").innerHTML = "Next New Year is on : "+nextNewYear.toDateString()
+        function Countdown() {
+            let today = new Date()
+            // let today = new Date("1/1/2024")
+            let todayTiming = today.getTime()
+            let remainingTime = newYearTiming-todayTiming;
+            let oneMin = 60*1000;
+            let oneHr = 60*oneMin;
+            let oneDay = 24*oneHr;
+
+            
+
+            if (newYearTiming < todayTiming) {
+                clearInterval(inter)
+                document.getElementById('countdown').innerHTML = "Countdown has expired..!"
+            }else if(newYearTiming == todayTiming){
+                clearInterval(inter)
+                document.getElementById('countdown').innerHTML = "Happy New Year..!"
+            }else{
+                let remDays = Math.floor(remainingTime/oneDay);
+                let remHours = Math.floor((remainingTime % oneDay) / oneHr);
+                let remMins = Math.floor((remainingTime % oneHr) / oneMin);
+                let remSecs = Math.floor((remainingTime % oneMin) / 1000)
+
+                days.textContent = addZero(remDays)
+                hours.textContent = addZero(remHours)
+                minutes.textContent = addZero(remMins)
+                seconds.textContent = addZero(remSecs)
+            }
+        }
+        let inter = setInterval("Countdown()",1000)
+    </script>
+</body>
+</html>

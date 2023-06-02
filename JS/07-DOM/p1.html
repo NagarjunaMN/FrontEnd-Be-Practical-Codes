@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <center>
+        <h1>DOM (DOCUMENT OBJECT MODEL)</h1>
+    </center>
+    <hr>
+    <script>
+        //document.write() //document is the object of the Document class and it has multiple methods and write is one of them
+        document.write(document.documentElement.getAttribute('lang')+"<br>");
+
+        document.body.style.background = "grey" //adds the css as inline css
+        
+        document.write(document.head.firstElementChild.nodeName)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>for..of loop</h3>
+    <script>
+        var colors = ["blue", "green", "red"] //array
+
+        //for(let ref of array)
+        for (const item of colors) {
+            document.write(`<h3>  ${ item } </h3>`)
+        }
+        // array.forEach(function(ref) {
+        //     document.write(`<h3>  ${ ref } </h3>`)
+        // });
+
+        var title = "Be-Practical"; //string
+        for (const item of title) {
+            document.write(`<p>  ${ item } </p>`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h3>serializeArray()</h3>
+    <form method="post" id="loginForm">
+        <label for="user">Username</label>
+        <input type="text" name="user" id="user">
+            <br><br>
+        
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass">
+            <br><br>
+        <button type="submit">Login</button>
+    </form>
+    <!-- custom  -->
+    <h3 id="out"></h3>
+
+    <script>
+        $(document).ready(function(){
+            // statements
+            $("#loginForm").submit(function (event) {
+                event.preventDefault();
+                $data = $(this).serializeArray();
+                console.log($data);
+                $.each($data, function (index,item) {
+                    $("#out").append(item.name + " : " + item.value + "<br/>");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

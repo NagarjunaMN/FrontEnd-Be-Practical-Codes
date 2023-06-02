@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-EVENT</title>
+    <style>
+        div{
+            background-color: teal;
+            color: #fff;
+            padding: 12px;
+            width: 50%;
+            height: 500px;
+            overflow: auto;
+        }
+        h4{
+            background-color: crimson;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Mouse EVENT</h1>
+    </center>
+    <hr>
+
+    <h3 >onmousewheel()</h3>
+    <h4 id="output"></h4>
+    <div id="txt" onmousewheel="wheelHandler()" onscroll="wheelHandler()">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+        
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates distinctio repellendus atque dolor deleniti quia aut consequatur tempora exercitationem? Nostrum laboriosam, cum sit soluta nihil nobis corrupti repellat eius atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui natus possimus vitae eveniet. Quos labore mollitia tempora? Ex minima incidunt a cupiditate reiciendis, culpa eveniet fugiat ratione earum distinctio accusamus?</p>
+    </div>
+    <script>
+        function wheelHandler() {
+            let pos = document.getElementById('txt');
+            document.getElementById('output').innerHTML = parseInt(pos.scrollTop) +'px'
+        }
+    </script>
+</body>
+</html>

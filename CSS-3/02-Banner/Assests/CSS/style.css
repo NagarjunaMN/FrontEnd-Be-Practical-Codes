@@ -1,0 +1,148 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+header{
+    background-color: grey;
+}
+header>nav>ul{
+    list-style-type: none;
+    float: right;
+}
+header>nav>img{
+    height: 64px;
+}
+
+header>nav>ul>li{
+    display: inline-block;
+    padding: 25px;
+}
+
+header>nav>ul>li:hover{
+    background-color: #fff;
+    
+}
+
+header>nav>ul>li:hover a{
+    color: #808080;
+    
+}
+
+header>nav>ul>li>a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* p2.html code */
+
+.commonBanner{
+    height: 400px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.commonBanner>div{
+    background-color: rgba(0, 0, 0,0.3);
+    padding: 30px;
+    line-height: 2;
+    display: inline-block;
+    box-shadow: -2px -2px 6px #000, 2px 2px 6px #000;
+
+}
+.commonBanner>div>h1{
+    font-size: 60px;
+    text-shadow: 3px 3px 3px #000;
+}
+
+.banner1{
+    background-color: teal;
+}
+
+/* p3.html code  */
+.banner2{
+    background-image: url(../Images/Large.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* background: url(../Images/Large.jpg) no-repeat center; */
+}
+
+/* p4.html code */
+.banner3{
+    /* background: repeating-linear-gradient(45deg ,rgb(0, 0, 255)50%, rgb(0, 0, 0)75%); */
+    background: linear-gradient(to right, orange, white, green);
+    /* we can use to right, to left, to top , to bottom to change the direction of displaying the colours */
+}
+
+/* p5.html code */
+.banner4{
+    background: repeating-linear-gradient(45deg, rgba(255, 0, 0, 0.5), rgba(0, 128, 0, 0.5) 50%);
+}
+
+/* p6.html code  */
+.banner5{
+    background:url(../Images/RedCar.jpg) no-repeat left, url(../Images/WhiteCar.jpg) no-repeat right ;
+    background-size: 50%;
+    
+} 
+/* p7.html */
+.banner6{
+    background: linear-gradient(45deg, rgba(220, 20, 60, 0.5), rgba(255, 255, 255, 0.5)),url(../Images/Large.jpg) no-repeat center;
+    background-size: 100%;
+}
+
+/* p8.html */
+.vidplay>.desktop{
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: -1;
+    width: 100%;
+}
+.vidplay>.tablet{
+    display: none;
+}
+.vidplay>.mobile{
+    display: none;
+}
+
+/* p9.html code */
+.banner8{
+    background: -o-linear-gradient(black, red);
+    background: -moz-linear-gradient(yellow, red);
+    background: -webkit-linear-gradient(yellow, blue);
+    background: linear-gradient(brown, white);
+}
+
+/* p10.html code */
+
+.banner9{
+    background-color: #808080;
+    text-align: left;
+    line-height: 2;
+}
+.common{
+    height: 400px;
+    width: 300px;
+    border: 2px solid #ccc;
+    margin: 30px;
+    padding: 30px;
+}
+.example-1{
+    background:radial-gradient(orange , white , green);
+}
+
+.example-2{
+    background:radial-gradient(circle, orange , white , green);
+}
+
+.example-3{
+    background:radial-gradient(circle farthest-side at left bottom, orange , white , green);
+}
+
+.example-4{
+    background:repeating-radial-gradient(orange , white 10% , green 20%);
+}
+

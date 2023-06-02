@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object.defineProperties() </h1>
+    <script>
+        var user = {};
+        Object.defineProperties(user,{
+            name: {
+                value : "Raju",
+                writable : true
+            },
+            mobile : {
+                value : 7897898754,
+                writable : false
+            },
+            email : {
+                value : "raj@gmail.com",
+                writable : true
+            }
+        });
+       
+        console.log("before user = ",user)
+
+        user.name = "Raj Kumar"
+        user.email = "Raj123@gmail.com"
+        user.mobile = 7562145785
+        console.log("after user = ",user)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Pop Over</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-lg btn-success" data-bs-toggle="popover" title="popover title" data-bs-content="Welcome to bootstrap popover content">
+                    Click on Button
+                </button>
+
+
+                <hr>
+
+                <button class="btn btn-lg btn-success" data-bs-toggle="popover" data-bs-container="body" data-bs-placement="up" title="popover title" data-bs-content="Welcome to bootstrap popover content">
+                    Top
+                </button>
+
+                <button class="btn btn-lg btn-success" data-bs-toggle="popover" data-bs-container="body" data-bs-placement="right" title="popover title" data-bs-content="Welcome to bootstrap popover content">
+                    Right
+                </button>
+
+                <button class="btn btn-lg btn-success" data-bs-toggle="popover" data-bs-container="body" data-bs-placement="bottom" title="popover title" data-bs-content="Welcome to bootstrap popover content">
+                    Bottom
+                </button>
+
+                <button class="btn btn-lg btn-success" data-bs-toggle="popover" data-bs-container="body" data-bs-placement="left" title="popover title" data-bs-content="Welcome to bootstrap popover content">
+                    Left
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+React has babel compiler it takes jsx and converts into executable js,
+app.js is tge defalt react component we export app.js ibto index.html, app.js is considered as virtual dom
+index.js is considered as main javascript file, it has dom render 
+index.html is the real dom
+
+package json includes the library files(dependancies) names used in our react project,
