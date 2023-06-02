@@ -1,0 +1,360 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Metropolis', sans-serif;
+    box-sizing: border-box;
+}
+
+/* BOOTSTRAP GRID LOGIC */
+.col0{display: none;}
+.col1{ width: 8.33%;}
+.col2{ width: 16.66%;}
+.col3{ width: 25%;}
+.col4{ width: 33.33%;}
+.col5{ width: 41.66%;}
+.col6{ width: 50%;}
+.col7{ width: 58.33%;}
+.col8{ width: 66.66%;}
+.col9{ width: 75%;}
+.col0{ width: 83.33%;}
+.col11{ width: 91.66%;}
+.col12{ width: 100%;}
+
+
+[class*="col"]{
+    float: left;
+    padding: 10px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* MARGIN AND PADDING */
+.mx-50{margin: auto 50px;}
+.mx-10{margin: auto 10px;}
+.mx-20{margin: auto 20px;}
+.my-50{margin: 50px auto;}
+.my-20{margin: 20px auto;}
+.m-50{margin: 50px;}
+.mt-50{margin-top: 50px;}
+.px-50{padding: auto 50px;}
+.py-50{padding: 50px 0px;}
+.p-50{padding: 50px;}
+.px-20{padding: auto 20px;}
+.py-20{padding: 20px 0px; }
+.p-20{padding: 20px;}
+.py-10{padding: 10px 0px;}
+.my-10{margin: 10px auto;}
+.my-8{margin: 8px auto;}
+/* LINE HEIGHT */
+.ln-2{line-height: 2;}
+
+/* COLORS */
+:root{
+    --font-color:#fff;
+    --txt-color: #5A6F80;
+    --bg-color:#59BFAA;
+    --bg-light-color : #F0F7FF;
+}
+
+.bg-green{background: var(--bg-color);}
+.bg-white{background: var(--font-color);}
+.bg-light-green{background: var(--bg-light-color);}
+.bg-grey{background: var(--txt-color);}
+.text-green{color: var(--bg-color);}
+.text-light-green{color: var(--bg-light-color);}
+.text-grey{color: var(--txt-color);}
+.text-white{color: var(--font-color);}
+
+/* TEXT ALIGNMENT */
+.text-right{text-align: right;}
+.text-left{text-align: left;}
+.text-center{text-align: center;}
+.text-justify{text-align: justify;}
+
+/* FLEX */
+.container{
+    display: flex; 
+    flex-flow: row; 
+    gap: 20px;
+}
+
+/* ICONS */
+
+.icons>b{
+    padding: 2px ;
+    margin: auto 5px;
+}
+.icons>b>[class*="fa"],.icons>p>span,.icons>p>[class*="fa"]{
+    transition: 1s;
+    cursor: pointer;
+    color: white;
+}
+.icons>b>[class*="fa"]:hover, .icons>p>[class*="fa"]:hover,.icons>p>span:hover{color:var(--txt-color);}
+
+/* NAVIGATION BAR */
+
+header>nav>div>img{height: 56px;}
+header>nav>.container{
+    align-items: center;
+    /* align-items: flex-start; */
+}
+header>nav>.container h3{transition: 1s;}
+header>nav>.container small{
+    font-size: 11px;
+}
+header>nav>.container:hover h3{
+    color: black;
+}
+header>nav>div>ul{
+    list-style-type: none;
+    float: right;
+    margin-top: 8px;
+}
+header>nav>div>ul>li{
+    display: inline-block;
+    padding: 10px 20px;
+}
+header>nav>div>ul>li>a{text-decoration: none;}
+header>nav>div>ul>li>a>select{border: none; font-size: 14px;}
+
+header>nav>div>ul>li:last-child{
+    border: 2px solid var(--txt-color);
+    border-radius: 25px;
+    transition: 1s;
+}
+header>nav>div>ul>li:last-child:hover{
+    background-color: var(--bg-color);
+    color:white;
+    border: 2px solid var(--bg-color);
+}
+header>nav>div>ul>li:last-child:hover a{color:white;}
+header>nav>div>ul>li:hover a,header>nav>div>ul>li:hover a>select{color:#59BFAA; }
+
+
+/* DESKTOP BANNER */
+.desktop-banner{
+    overflow: hidden;
+    position: relative;
+
+}
+.desktop-banner>video{
+    width: 100% !important;   
+}
+.desktop-banner>div{
+    position: absolute;
+    top: 20%;
+    left: 4%;
+    line-height: 1.5;
+}
+.desktop-banner>div>p{
+    font-size: 15px;
+}
+.bannerText{
+    background-color: rgba(255, 255, 255,0.5);
+}
+.desktop-banner>div>h1{font-size: 55px;}
+.tablet-banner, .mobile-banner{display: none;}
+
+/*Welcome to Kind Heart Charity */
+.img-box1{background: url(../Images/image1.png);}
+.img-box2{background: url(../Images/image2.png);}
+.img-box3{background: url(../Images/image3.png);}
+.img-box4{background: url(../Images/image4.png);}
+
+.img-position{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 150px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items:flex-end;
+    transition: 1s;
+}
+.imgCard>div>h2{font-weight: normal !important;}
+
+.img-position:hover{transform: scale(0.7);}
+.imgCard:hover{box-shadow: 0 10px 50px rgba(90, 111, 128, 1); border-radius: 20px;}
+.imgCard:hover h2{transform: scale(1.01);}
+
+/* Our Story */
+.ceo{
+    background: url(../Images/ceo1.jpg) no-repeat top;
+    background-size: cover;
+    height: 563px;
+    display: flex;
+    margin: 0px 20px;
+    flex-flow: row wrap;
+    align-items: flex-end;
+}
+.ceo, .consulting, .consulting-box1, .consulting-box2{
+    border-radius: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    line-height: 2;
+    /* text-align: justify; */
+    padding: 30px;
+}
+.title>h1{font-size: 40px;}
+.consulting-box1, .consulting-box2{
+    transition: 1s;
+    text-align: left;
+}
+.consulting-box1:hover, .consulting-box2:hover{background-color: var(--bg-color);}
+.consulting-box1:hover p,.consulting-box1:hover h2,.consulting-box2:hover p,.consulting-box2:hover h1{color: var(--font-color) ;}
+.consulting-box1:hover p>[class*="fa"]{background-color: var(--txt-color) !important;}
+
+.consulting-box1>p>[class*="fa"]{
+    background-color: var(--bg-light-color) !important;
+    border-radius: 50%;
+}
+
+
+
+/* Self Intro */
+.selfIntro>img{
+    border-radius: 25px;
+    height: 500px;
+}
+.box>b>[class*="fa"]{
+    margin: 5px;
+    padding: 8px;
+    color: var(--font-color);
+    background-color: var(--txt-color);
+    border-radius: 50%;
+    transition: 1s;
+}
+.box>b>[class*="fa"]:hover{
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+}
+
+/* Make Impact */
+.makeImpact{
+    align-items: center;
+}
+.makeImpact>div>a{
+    text-decoration: none;
+    transition: 1s;
+}
+.makeImpact>div>a:hover{
+    color: var(--bg-color) ;
+}
+.makeImpact>div>button{
+    text-decoration: none;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    transition: 1s;
+}
+.makeImpact>div>button:hover{
+    background-color: var(--bg-color) ;
+}
+/* OUR CAUSE */
+.ourCause>.cause-img1{background: url(../Images/ChildEducation.jpg);}
+.ourCause>.cause-img2{background: url(../Images/Poverty.jpg);}
+.ourCause>.cause-img3{background: url(../Images/DrinkingWater.jpg);}
+.ourCause>.ourImage{
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px 25px 0px 0px;
+}
+.ourCause{transition: 1s;border: none;border-radius: 25px;}
+.ourCause:hover{
+    box-shadow: 0 10px 50px rgba(90, 111, 128, 1); border-radius: 20px;
+    border-radius: 25px;
+}
+/* box-shadow: 0 10px 50px rgba(90, 111, 128, 1); border-radius: 20px;}
+ */
+.ourCause>img{
+    height: 250px;
+    background-size: contain !important;
+    width: 100%;
+    background-position: center;
+    
+}
+.ourCause>div>div>progress,.ourCause>button{
+    width: 100%;
+}
+.ourCause>button{
+    padding: 15px 20px;
+    background-color: var(--txt-color);
+    border: none;
+    border-radius: 0px 0px 25px 25px;
+    color: var(--font-color);
+    font-size: 18px;
+    transition: 1s;
+}
+.ourCause>button:hover{
+    background-color: var(--bg-color);
+}
+.ourCause>div>div>.container{
+    justify-content: space-between;
+}
+
+/* Volunteer */
+.volunteercls form{
+    border: none;
+    border-radius: 25px;
+}
+.volunteercls form>h1{
+    margin-bottom: 20px;
+}
+
+
+.volunteercls form>div>input, .volunteercls form>textarea{
+    background-color: var(--bg-light-color);
+    border: none;
+    font-size: 15px;
+    margin: 0px 10px 25px 0px;
+    outline: none;
+    transition: 1s;
+    width: 100%;
+}
+.volunteercls form>div{ 
+    justify-content: space-between;
+}
+.volunteercls form>div>input{
+    flex: 8;
+}
+.volunteercls form>div>input:focus, .volunteercls form>textarea:focus{
+    border-bottom: 2px solid var(--txt-color);
+}
+.volunteercls form>textarea, .volunteercls form>button{
+    width: 100%;
+}
+
+.volunteercls form>button{
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.volunteercls form>button:hover{
+    background-color: var(--bg-color);
+}
+.volunteercls .volunteerImg{
+    background: url(../Images/ceo.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 38%;
+    height: 270px;
+    border: none;
+    border-radius: 50%;
+}
+.volunteercls>div>div>.container{
+    flex-flow: column wrap !important;
+    justify-content: center;
+    align-items: center;
+}
+
+

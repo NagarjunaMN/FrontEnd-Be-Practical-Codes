@@ -1,0 +1,92 @@
+@media(max-width:768px){
+    header{
+        justify-content: center !important;
+    }
+    header>nav{
+        padding: 10px;
+        margin: 10px;
+    }
+    .banner>div>h1, .banner>div>p, .banner>div>button, .about>div>h1, .about>div>p, .about>div>button, .services>div>h1, .services>div>p,.aboutimg>div>h1, .aboutimg>div>p, .aboutimg>div>button, .serviceimg>div>h1, .serviceimg>div>p, .serviceimg>div>button{
+        margin: 20px 10px;
+    }
+    .banner>div{
+        padding: 30px 0px;
+        text-align: center;
+        opacity: 0.6;
+        width: 100%;
+    }
+
+    .banner>div>h1,.aboutimg>div>h1, .serviceimg>div>h1{font-size: 30px;}
+    .banner>div>p,.aboutimg>div>p, .serviceimg>div>p{font-size: 15px;}
+    .banner>div>button,.aboutimg>div>button, .serviceimg>div>button{font-size: 12px;}
+    .serviceCard>div>button{font-size: 12px;padding: 15px;}
+    .aboutimg>div, .serviceimg>div{padding: 0px;}
+    .card>.item{
+        padding: 40px 10px;
+        line-height: 1.2;
+    }
+    .card>.item>h1{
+        padding: 10px 0px;
+    }
+    .about,.services{
+        margin: 10px 0px;
+        padding: 0px;
+    }
+    .about>.item{
+        width: 100%;
+    }   
+
+    /* .aboutimg>div>h1, .serviceimg>div>h1{margin-top: 10px;} */
+    .aboutimg>div, .serviceimg>div{
+        line-height: 1.6;
+        text-align: center;
+        width: 100%;
+        opacity: 0.7;
+
+    }
+
+    .services>div>.item{
+        width: 100% !important;   
+        margin: auto 5px;
+    }
+}
+
+@media(min-width:769px) and (max-width:1200px) {
+
+    .banner>div{
+        height: 450px;
+        padding: 40px 0px;
+        text-align: center;
+        opacity: 0.6;
+        width: 100%;
+    }
+    .banner>div>h1{font-size: 40px;}
+    .card>.item{
+        padding: 40px 20px;
+    }
+    .about,.services{
+        margin: 50px 0px;
+        padding: 0px; 
+    }
+    .about>.item{
+        width: 100%;
+    }  
+    .aboutimg>div>h1, .aboutimg>div>p, .aboutimg>div>button, .serviceimg>div>h1, .serviceimg>div>p, .serviceimg>div>button{
+        margin: 20px 100px;
+    }
+    .aboutimg>div, .serviceimg>div{padding: 100px 0px;}
+    .aboutimg>div, .serviceimg>div{
+        line-height: 1.6;
+        text-align: center;
+        width: 100%;
+        opacity: 0.7;
+        height: 100%;
+        padding-top:60px ;
+        
+    }
+    .services>div>.item{
+        width: 47% !important;  
+        margin: auto 5px; 
+    }
+    
+}

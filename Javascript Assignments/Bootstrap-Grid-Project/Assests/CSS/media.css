@@ -1,0 +1,113 @@
+@media(max-width:992px){
+    [class*="col"]{
+        width: 100%;
+    }
+    /* ICONS */
+    .icons{text-align: left;}
+    .icons>b{margin: auto 0px;}
+    /* NAVIGATION */
+    header>nav>.container{justify-content: center;}
+    header>nav{text-align: center;}
+    header>nav>div>ul{float: none;margin-top: 0px;}
+    header>nav>div>ul>li{display: block;}
+    header>nav>div>ul>li:last-child{border: none;}
+    header>nav>div>ul>li:last-child:hover{background-color: transparent; border: none;}
+    header>nav>div>ul>li:last-child:hover a{color: #59BFAA; }
+    /*  banner code */
+    .desktop-banner,.tablet-banner{display: none;}
+    .mobile-banner{
+        display: block;
+        overflow: hidden;
+        position: relative;
+        
+    }
+    .mobile-banner>video{
+        width: 100%;
+        /* max-height: 900px; */
+    }
+    .mobile-banner>div{
+        position: absolute;
+        top: 20%;
+        left: 4%;
+        color: #fff;
+        line-height: 1.5;
+    }
+    .mobile-banner>div>p{
+        font-size: 15px;
+    }
+
+    /* Self Intro */
+    .selfIntro{padding: 0px; margin: 10px;}
+    .selfIntro>.title>p,.selfIntro>.title>h1,.selfIntro>.box{text-align: center; padding: 5px;}
+    .selfIntro>div>p{text-align: justify;}
+     /*  Make an impact.Save lives. */
+    .makeImpact>.colTab0{
+        display: none;
+    }
+    .makeImpact{
+        flex-flow: column wrap;
+        text-align: center;
+    }
+    
+}
+
+
+/* Tablet */
+@media(min-width:993px) and (max-width:1200px) {
+    .col0{display: block;}
+    .colTab0{display: none;}
+    .colTab1{ width: 8.33%;}
+    .colTab2{ width: 16.66%;}
+    .colTab3{ width: 25%;}
+    .colTab4{ width: 33.33%;}
+    .colTab5{ width: 41.66%;}
+    .colTab6{ width: 50%;}
+    .colTab7{ width: 58.33%;}
+    .colTab8{ width: 66.66%;}
+    .colTab9{ width: 75%;}
+    .colTab0{ width: 83.33%;}
+    .colTab11{ width: 91.66%;}
+    .colTab12{ width: 100%;}
+
+    [class*="colTab"]{
+        float: left;
+        padding: 10px;
+    }
+    .icons{text-align: left;}
+    /* NAVIGATION */
+    header>nav{text-align: center;}
+    header>nav>.container{justify-content: center;}
+    header>nav>div>ul{float: none;margin-top: 0px;}
+    /*  banner code */
+    .desktop-banner, .mobile-banner{display: none;}
+    .tablet-banner{
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+    .tablet-banner>video{
+        width: 100%;
+    }
+    .tablet-banner>div{
+        position: absolute;
+        top: 20%;
+        left: 4%;
+        color: #fff;
+        line-height: 1.5;
+    }
+    .tablet-banner>div>p{
+        font-size: 15px;
+    }
+    .tablet-banner>div>h1{font-size: 55px;}
+    /* Welcome to Kind Heart Charity */
+    .imgWhole>div{width: 50%;}
+    /* Our Volunteer */
+    .volunteercls .volunteerImg{
+
+        width: 50%;
+        height: 230px;
+
+    }
+   
+    
+}

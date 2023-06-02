@@ -1,0 +1,111 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+/* ----------------------- Form Css----------------------------------- */
+
+header{
+background-color: lightgrey;
+}
+
+header>nav>ul{
+list-style-type: none;
+
+} 
+header>nav>img{
+height: 64px;
+}
+
+header>nav>ul>li{
+display: inline-block;
+padding: 25px;
+}
+
+header>nav>ul>li:hover{
+background-color: #fff;
+}
+
+header>nav>ul>li>a{
+text-decoration: none;
+font-size: larger;
+color: black;
+}
+
+header>nav>ul>li:hover a{
+color: #808080;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-flex-end{
+    justify-content: flex-end;
+}
+.validForm{
+    flex-flow: column wrap;
+    padding: 10px;
+    margin: 20px;  
+    text-align: center;
+    background-color: lightgrey;
+    
+    width: 500px;
+}
+.validForm>.width>label{
+    display: block;
+}
+.validForm>div>label,.validForm>div>p{
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.width>input,.width>select{
+    width: 200px;
+    height: 20px;
+}
+.space>label{
+    margin-right: 10px;
+}
+.validForm>div>strong{
+    padding-top : 10px;
+    display: block;
+}
+.validForm>div>button{
+    padding: 8px 30px;
+    margin: 2px;
+    
+}
+
+.validForm>.forCheck>label{
+    font-size: 17px;
+}
+/* --------------------Table CSS---------------------------------- */
+table, table th ,table td{
+    /* width: 100%; */
+    background-color: lightgray;
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 20px;
+}
+table{
+    margin: 10px;
+}
+table th,table td{width: 200px;}
+table th{
+    background-color: grey;
+}
+table th:hover{background-color: lightgray;}
+table td:hover{background-color: grey;color: white;}
+table td>button{
+    padding: 8px 15px;
+    margin: 2px;
+}
+table td>button:hover{
+    background-color: lightgray;
+    /* color: white; */
+}

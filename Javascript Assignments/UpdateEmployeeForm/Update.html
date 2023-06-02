@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+   <link rel="stylesheet" href="assests/CSS/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="container justify-content-flex-end">
+                <li><a href="EmployeeRegistration.html">Create</a></li>
+                <li><a href="Display.html">Display</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container justify-content-center">
+        <form action="/page2.html" method="post" class="validForm container" autocomplete="off" onsubmit="validate(event)" onreset="resetData(event)" novalidate>
+            <h1>Update Form</h1>
+            <div  class="width">
+                <label for="fname">First Name</label>
+                <input type="text" name="user" id="fname">
+                <strong id="fnameMessage"></strong>
+            </div>
+            <div  class="width">
+                <label for="lname">Last Name</label>
+                <input type="text" name="user" id="lname">
+                <strong id="lnameMessage"></strong>
+            </div>
+            <div class="width">
+                <label for="mobile">Mobile Number</label>
+                <input type="number" name="mobile" id="mobile" maxlength="10">
+                <strong id="mobileMessage"></strong>
+            </div>
+            <div class="width">
+                <label for="altMobile">Alt Mobile Number</label>
+                <input type="number" name="mobile" id="altMobile" maxlength="10">
+                <strong id="altMobileMessage"></strong>
+            </div>
+            <div class="width">
+                <label for="localAddr">Local Address</label>
+                <input type="text" name="localAddr" id="localAddr">
+                <strong id="localAddrMessage"></strong>
+            </div>
+            <div class="width">
+                <label for="perAddr">Permanent Address</label>
+                <input type="text" name="perAddr" id="perAddr">
+                <strong id="perAddrMessage"></strong>
+            </div>
+            <div class="width">
+                <label for="pincode">Pincode</label>
+                <input type="number" name="pincode" id="pincode" maxlength="6">
+                <strong id="pincodeMessage"></strong>
+            </div>
+            <div>
+                <label for="empPhoto">Emp Photo</label>
+                <input type="file" name="empPhoto" id="empPhoto" accept="image/jpeg, image/png, image/jpg">
+                <strong id="empPhotoMessage"></strong>
+            </div>
+            <div>
+                <button type="submit">Update</button>
+                <button type="reset">Reset</button>
+            </div>
+            
+        </form>
+    </div>
+    <script>
+        let empDetails = JSON.parse(localStorage.getItem("empDetails"));
+        document.getElementById('fname').value = empDetails.firstName;
+        document.getElementById('lname').value  = empDetails.lastName;
+        document.getElementById('mobile').value  = empDetails.mobile[0];
+        document.getElementById('altMobile').value  = empDetails.mobile[1];
+        document.getElementById('localAddr').value  = empDetails.address.local;
+        document.getElementById('perAddr').value  = empDetails.address.per;
+        document.getElementById('pincode').value  = empDetails.pincode;
+
+ 
+         
+       
+    </script>
+    <script>
+        function validate(event) {
+            event.preventDefault();
+
+            let fname = document.getElementById('fname').value;
+            let fnameMessage = document.getElementById('fnameMessage');
+            let lname = document.getElementById('lname').value;
+            let lnameMessage = document.getElementById('lnameMessage');
+
+            let mobile = document.getElementById('mobile').value;
+            let mobileMessage = document.getElementById('mobileMessage');
+            let altMobile = document.getElementById('altMobile').value;
+            let altMobileMessage = document.getElementById('altMobileMessage');
+
+            let localAddr = document.getElementById('localAddr').value;
+            let localAddrMessage = document.getElementById('localAddrMessage');
+            let perAddr = document.getElementById('perAddr').value;
+            let perAddrMessage = document.getElementById('perAddrMessage');
+            
+            let pincode = document.getElementById('pincode').value;
+            let pincodeMessage = document.getElementById('pincodeMessage');
+
+            let empPhoto = document.getElementById('empPhoto').files[0];
+            let empPhotoMessage = document.getElementById('empPhotoMessage');
+            // console.log("employee photo",empPhoto)
+            // console.log(URL.createObjectURL(empPhoto))
+            // document.write(`<img src = "${URL.createObjectURL(empPhoto)}" >`)
+            
+            let empDetails = new Object()
+            let mobilearr = []
+            
+            let validFname = false;
+            let validLname = false;
+            let validMobile = false;
+            let validAltMobile = false;
+            let validLocAddr = false;
+            let validPerAddr = false;
+            let validPin = false;
+            let validEmpPhoto = false;
+            
+// -------------------For  firstname and lastname -------------------------------------
+
+            let nameregex = /^([A-Za-z]+ )+[A-Za-z]+$|^[A-Za-z]+$/;
+            if(fname.length == 0 ){
+                fnameMessage.innerHTML = "Enter First Name";
+                fnameMessage.style.color = "red";
+            }else if(fname.length <= 5){
+                    fnameMessage.innerHTML = "First Name input length must be greater than 5 characters";
+                    fnameMessage.style.color = "red";           
+            }else if(nameregex.test(fname) == false) {
+                    fnameMessage.innerHTML = "No Numbers, Characters and 2 or more spaces allowed";
+                    fnameMessage.style.color = "red";
+            }else{
+                fnameMessage.innerHTML = "Valid First Name";
+                fnameMessage.style.color = "green";
+                empDetails.firstName = fname;
+                validFname = true;
+            }
+
+            if(lname.length == 0 ){
+                lnameMessage.innerHTML = "Enter Last Name";
+                lnameMessage.style.color = "red";
+            }else if(lname.length <= 4){
+                    lnameMessage.innerHTML = "Last Name input length must be greater than 4 characters";
+                    lnameMessage.style.color = "red"; 
+            }else if(nameregex.test(lname) == false) {
+                lnameMessage.innerHTML = "No Numbers, Characters and 2 or more spaces allowed";
+                lnameMessage.style.color = "red";          
+            }else {
+                lnameMessage.innerHTML = "Valid Last Name";
+                lnameMessage.style.color = "green";
+                empDetails.lastName = lname;
+                validLname = true;
+            }
+            empDetails.fullName = function() {return this.firstName+' '+this.lastName};
+             
+ //----------------------------------------------------------------------------
+ 
+ //  --------------------for Mobile number -------------------------------------------
+  
+            let mobileregex = /^[6-9]\d{9}$/;
+            if(mobile == ''){
+                mobileMessage.innerHTML = "Mobile field must be filled";
+                mobileMessage.style.color = "red";
+            }else{
+                if(mobileregex.test(mobile) === false){
+                    mobileMessage.innerHTML = "Invalid Indian mobile number";
+                    mobileMessage.style.color = "red";
+                }else{
+                    mobileMessage.innerHTML = "Valid Indian mobile number";
+                    mobileMessage.style.color = "green";
+                    mobilearr.push(mobile);
+                    validMobile = true;
+                }
+            }
+
+            if(altMobile == ''){
+                altMobileMessage.innerHTML = "Mobile field must be filled";
+                altMobileMessage.style.color = "red";
+            }else{
+                if(mobileregex.test(altMobile) === false){
+                    altMobileMessage.innerHTML = "Invalid Indian Mobile number";
+                    altMobileMessage.style.color = "red";
+                }else{
+                    altMobileMessage.innerHTML = "Valid Indian Mobile number";
+                    altMobileMessage.style.color = "green";
+                    mobilearr.push(altMobile);
+                    validAltMobile = true;
+                }
+            }
+            empDetails.mobile = mobilearr;
+            
+ //----------------------------------------------------------------------------
+ 
+//  --------------------for Address checking -------------------------------------------
+            
+            empDetails.address = new Object()
+            if(localAddr.length == 0 ){
+                localAddrMessage.innerHTML = "Enter your Local Address";
+                localAddrMessage.style.color = "red";
+            }else if(localAddr.length <= 2){
+                    localAddrMessage.innerHTML = "Local Address input length must be greater than 3 characters";
+                    localAddrMessage.style.color = "red";           
+            }else {
+                localAddrMessage.innerHTML = "Valid Local Address";
+                localAddrMessage.style.color = "green";
+                empDetails.address.local = localAddr;
+                validLocAddr = true;
+            }
+           
+            if(perAddr.length == 0 ){
+                perAddrMessage.innerHTML = "Enter your Permanent Address";
+                perAddrMessage.style.color = "red";
+            }else if(perAddr.length <= 2){
+                    perAddrMessage.innerHTML = "Permanent Address input length must be greater than 3 characters";
+                    perAddrMessage.style.color = "red";           
+            }else {
+                perAddrMessage.innerHTML = "Valid Permanent Address";
+                perAddrMessage.style.color = "green";
+                empDetails.address.per = perAddr;
+                validPerAddr = true;
+            }
+
+ //----------------------------------------------------------------------------
+ 
+//  --------------------for Pincode checking -------------------------------------------
+
+            if(pincode.length == 0 ){
+                pincodeMessage.innerHTML = "Enter your Pincode";
+                pincodeMessage.style.color = "red";
+            }else if(pincode.length <= 5 || pincode.length >6){
+                    pincodeMessage.innerHTML = "Pincode input length must be 6 characters";
+                    pincodeMessage.style.color = "red";           
+            }else {
+                pincodeMessage.innerHTML = "Valid Pincode";
+                pincodeMessage.style.color = "green";
+                empDetails.pincode = pincode;
+                validPin = true;
+            }
+           
+ //----------------------------------------------------------------------------
+ 
+//  --------------------for Emp photo checking --------------------------------
+            
+            if(empPhoto == undefined ){
+                empPhotoMessage.innerHTML = "Taking your previous Image";
+                empPhotoMessage.style.color = "green";
+                let urlPhoto = JSON.parse(localStorage.getItem("empDetails"));
+                empDetails.photo = urlPhoto.photo;
+                validEmpPhoto = true;
+            }else {
+                // empPhotoMessage.innerHTML = "Valid Employee Image";
+                // empPhotoMessage.style.color = "green";
+                // empDetails.photo = URL.createObjectURL(empPhoto);
+                // validEmpPhoto = true;
+                var reader = new FileReader();
+                reader.onload = function(){
+                    empDetails.photo  = this.result;
+                    validEmpPhoto = true;
+                    // document.write(`<img src=${empDetails.photo} height = 90px>`)
+                    if (validFname == true && validLname == true && validMobile == true && validAltMobile == true && validLocAddr == true && validPerAddr == true && validPin == true && validEmpPhoto == true){
+                        localStorage.setItem("empDetails",JSON.stringify(empDetails))
+                        let lastname = localStorage.getItem("empDetails");
+                        location.href="Display.html";
+                    }
+                }
+                 reader.readAsDataURL(empPhoto);
+                 
+            }
+
+//----------------------Table to display all employee details..................
+
+            if (validFname == true && validLname == true && validMobile == true && validAltMobile == true && validLocAddr == true && validPerAddr == true && validPin == true && validEmpPhoto == true){
+                localStorage.setItem("empDetails", JSON.stringify(empDetails));
+                location.href="Display.html";
+            }
+        }
+
+    function resetData() {
+        event.preventDefault()
+        
+            document.getElementById('fname').value = "";
+            document.getElementById('fnameMessage').innerText = '';
+            document.getElementById('lname').value = "";
+            document.getElementById('lnameMessage').innerText = '';
+
+            document.getElementById('mobile').value = "";
+            document.getElementById('mobileMessage').innerText = '';
+            document.getElementById('altMobile').value = "";
+            document.getElementById('altMobileMessage').innerText = '';
+
+            document.getElementById('localAddr').value = "";
+            document.getElementById('localAddrMessage').innerText = '';
+            document.getElementById('perAddr').value = "";
+            document.getElementById('perAddrMessage').innerText = '';
+            
+
+            document.getElementById('pincode').value = "";
+            document.getElementById('pincodeMessage').innerText = '';
+
+            document.getElementById('empPhoto').value = '';
+            document.getElementById('empPhotoMessage').innerText = '';
+
+        }
+    </script>
+
+
+</body>
+</html>

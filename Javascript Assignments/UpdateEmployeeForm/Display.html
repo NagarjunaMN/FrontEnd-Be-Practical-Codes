@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <link rel="stylesheet" href="Assests/CSS/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="container justify-content-flex-end">
+                <li><a href="EmployeeRegistration.html">Create</a></li>
+                <li><a href="Display.html">Display</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        let empDetails = JSON.parse(localStorage.getItem("empDetails"));
+        // console.log("dmp data",empDetails.photo)
+        empDetails.fullName = function() {return this.firstName+' '+this.lastName};
+        document.write(`<table>
+        <tr>
+            <th>First Name</th>  
+            <th>Last Name</th>
+            <th>Full Name</th>
+            <th>Mobile Number</th>
+            <th>Alt Mobile Number</th>
+            <th>Local Address</th>
+            <th>Per Address</th>
+            <th>Pincode</th>
+            <th>Emp Photo</th>
+            <th>Options</th>  
+        </tr>
+        <tr>
+            <td>${empDetails.firstName}</td>
+            <td>${empDetails.lastName}</td>
+            <td>${empDetails.fullName()}</td>
+            <td>${empDetails.mobile[0]}</td>
+            <td>${empDetails.mobile[1]}</td>
+            <td>${empDetails.address.local}</td>
+            <td>${empDetails.address.per}</td>
+            <td>${empDetails.pincode}</td>
+            <td><img src=${empDetails.photo} height = 90px></td>
+            <td><button id=update>Edit</button>
+            <button id=del>Delete</button></td>
+        </tr>
+        </table>`);
+        document.getElementById('del').onclick = () =>{ 
+            localStorage.clear();
+            location.reload();
+            
+        }
+        document.getElementById('update').onclick = () =>{
+            location.href = "Update.html"
+        }
+   
+   
+   </script>
+    
+</body>
+</html>

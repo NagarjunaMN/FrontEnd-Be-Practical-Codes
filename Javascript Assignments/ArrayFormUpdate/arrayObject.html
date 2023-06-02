@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <style>
+        table, table tr,table  td{
+            font-size: 17px;
+            border-collapse: collapse;
+        }
+        table tr:nth-child(even){
+            background-color: lightgrey;
+        }
+        table tr:nth-child(odd){
+            background-color: darkgray;
+        }
+        table tr:hover{
+            background-color: grey;
+            color: white;
+            border: 1px solid white;
+        }     
+        
+        td:last-child{
+            text-align: center;
+        } 
+        td button{
+            padding: 5px 15px;
+            margin: 5px;
+        }
+        td button:hover{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Employee Details</h1>
+    </center>
+    <hr><br><br>
+
+    <script>
+        let empDetails = [{
+                'id':1,
+                'firstName' : 'Nagarjuna',
+                'lastName' :'Mondru',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [7894561320,4667891320],
+                'pincode' : 560075,
+                'address' : {'local' : "Bengaluru",
+                            "per" : "Guntur"},
+                'photo' : 'assests/Images/Image1.jpg'
+            },
+            {
+                'id':2,
+                'firstName' : 'Rajesh',
+                'lastName' :'Raju',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [7764361320,7845891320],
+                'pincode' : 560077,
+                'address' : {'local' : "Mumbai",
+                            "per" : "Bangalore"},
+                'photo' : 'assests/Images/Image2.jpg'
+            },
+            {
+                'id':3,
+                'firstName' : 'Ramesh',
+                'lastName' :'vk',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [7754234320,1224571320],
+                'pincode' : 560066,
+                'address' : {'local' : "Goa",
+                            "per" : "Mysuru"},
+                'photo' : 'assests/Images/Image1.jpg'
+            },
+            {
+                'id':4,
+                'firstName' : 'Ram',
+                'lastName' :'Raj',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [774231234,122475720],
+                'pincode' : 560011,
+                'address' : {'local' : "Bellary",
+                            "per" : "Bangalore"},
+                'photo' : 'assests/Images/Image2.jpg'
+            },
+            {
+                'id':5,
+                'firstName' : 'Abdul',
+                'lastName' :'Kalam',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [745831234,111175720],
+                'pincode' : 560022,
+                'address' : {'local' : "Bengalore",
+                            "per" : "Chennai"},
+                'photo' : 'assests/Images/Image1.jpg'
+            },
+            {
+                'id':6,
+                'firstName' : 'Raman',
+                'lastName' :'C V',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [754531234,222175720],
+                'pincode' : 560012,
+                'address' : {'local' : "Mangalore",
+                            "per" : "Belgaum"},
+                'photo' : 'assests/Images/Image2.jpg'
+            },
+            {
+                'id':7,
+                'firstName' : 'Narendra',
+                'lastName' :'Modi',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [457831234,231175720],
+                'pincode' : 560041,
+                'address' : {'local' : "goa",
+                            "per" : "Hyderabad"},
+                'photo' : 'assests/Images/Image1.jpg'
+            },
+            {
+                'id':8,
+                'firstName' : 'Raja',
+                'lastName' :'Shekar',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [698831234,747175720],
+                'pincode' : 560035,
+                'address' : {'local' : "Hyderabad",
+                            "per" : "Vishakapatnam"},
+                'photo' : 'assests/Images/Image2.jpg'
+            },
+            {
+                'id':9,
+                'firstName' : 'Shiva',
+                'lastName' :'Kumar',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [885831234,991175720],
+                'pincode' : 560048,
+                'address' : {'local' : "Mysore",
+                            "per" : "Mandya"},
+                'photo' : 'assests/Images/Image1.jpg'
+            },
+            {
+                'id':10,
+                'firstName' : 'Shankar',
+                'lastName' :'prasad',
+                'fullName' : function() {
+                    return this.firstName+' '+this.lastName;
+                },
+                'mobile' : [995831234,775175720],
+                'pincode' : 560039,
+                'address' : {'local' : "davanagere",
+                            "per" : "Shivamogga"},
+                'photo' : 'assests/Images/Image2.jpg'
+            }
+        
+        ];
+
+        let updatedDetails = JSON.parse(localStorage.getItem("updatedDetails"))
+        console.log(updatedDetails)
+        for (let i = 0; i < empDetails.length; i++) {
+                const element = empDetails[i];
+                if(element.id == updatedDetails.id){
+                    element.firstName = updatedDetails.firstName;
+                    element.lastName = updatedDetails.lastName;
+                    element.mobile[0] = updatedDetails.mobile[0];
+                    element.mobile[1] = updatedDetails.mobile[1];
+                    element.photo = updatedDetails.photo;
+                    element.pincode = updatedDetails.pincode;
+                    element.address.local = updatedDetails.address.local;
+                    element.address.per = updatedDetails.address.per;
+                }
+        }
+        document.write(`<table border = 1 cellpadding = 20px>
+            <tr>
+                <th>Emp-Id</th>
+                <th>First Name</th>  
+                <th>Last Name</th>
+                <th>Full Name</th>
+                <th>Mobile Number</th>
+                <th>Alt Mobile Number</th>
+                <th>Local Address</th>
+                <th>Per Address</th>
+                <th>Pincode</th>
+                <th>Emp Photo</th>
+                <th>Options</th>  
+            </tr>`)
+            
+        // for (let i = 0; i <empDetails.length; i++) {
+            empDetails.forEach(function (element,i,arr) {
+                
+            // }
+            // const element = empDetails[i];
+            // console.log(element)
+            document.write(`<tr>`)
+            document.write(`
+                <td>${element.id}</td>
+                <td>${element.firstName}</td>
+                <td>${element.lastName}</td>
+                <td>${element.fullName()}</td>
+                <td>${element.mobile[0]}</td>
+                <td>${element.mobile[1]}</td>
+                <td>${element.address.local}</td>
+                <td>${element.address.per}</td>
+                <td>${element.pincode}</td>
+                <td><img src=${element.photo} height = 90px width = 130px></td>
+                <td><button id=${element.id} onclick="showElements(this)">Edit</button>
+                <button>Delete</button></td>
+                `)
+            document.write(`</tr>`) 
+        });
+        
+        document.write(`</table>`)
+
+        function showElements(btn) {
+            console.log("coming here",btn.id)
+            // console.log("coming here",obj)
+            for (let i = 0; i < empDetails.length; i++) {
+                const element = empDetails[i];
+                if(element.id == btn.id){
+                    console.log(element)
+                    localStorage.setItem("empDetails",JSON.stringify(element))
+                    location.href = "update.html"
+                }
+            }
+        }
+       
+    </script>
+
+</body>
+</html>

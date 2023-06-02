@@ -1,0 +1,217 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Card1.html code  */
+#color{
+    background-color:rgb(234, 239, 241);
+    list-style-image: max;   
+}
+
+.card1{
+    height: 630px;
+    width: 400px;
+    background-color: #fff;
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 15px;
+    position: absolute;
+    left: 550px;
+    top: 60px;
+}
+
+.card1> .imgs>img{
+    height: 250px;
+    width: 95%;
+    margin: 10px;
+    border-radius:15px ;
+    
+}
+
+.card1>.btns{
+    margin-left: 20px;
+}
+
+.card1>.btns button{
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 40px;
+    color:rgb(128, 128, 128); ;
+    border-color: rgb(169, 172, 174);
+    transition:color 2s;
+}
+
+.card1>.btns button:hover{
+    color: rgb(255, 255, 255);
+    background-color: grey;
+}
+
+.card1>.content{
+    padding: 20px;
+}
+
+.card1>.content>h1{
+    font-size: 35px;
+}
+.card1>.content>p{
+    margin: 20px 0px;
+    font-size: 20px;
+    word-spacing: 5px;
+    text-align: left;
+    color:rgb(169, 172, 174);
+    line-height: 25px;
+       
+}
+
+.card1>.content>center>button{
+    padding: 15px 30px;
+    border-radius:40px ;
+    background-color: rgb(211, 211, 211);
+    color: rgb(84, 84, 235);
+    font-weight: bold;
+    border-style: none;
+    transition: 2s;
+}
+.card1>.content>center>button:hover{
+    background-color:rgb(84, 84, 235);
+    color: rgb(211, 211, 211) ;
+}
+
+
+/* Card2.html code  */
+
+.card2{
+    background-color: #232831;
+    height: 630px;
+    width: 400px;
+    text-align: center;
+    position: absolute;
+    left: 550px;
+    top: 60px;
+    border-radius: 10px;
+
+}
+.card2>img{
+    margin-top: 30px;
+    border: 5px solid black;
+    border-radius: 100%;
+    height: 180px;
+    width: 45%;
+    box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
+}
+
+.card2>.name>p{
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+   
+}
+
+.card2>.info span{
+    color: #fff;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.card2>.socialMedia>ul>li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+.card2>.socialMedia>ul>li>a img{
+    height: 50px;
+    margin-top: 20px;
+}
+
+
+.card2>.btns button{
+    background-color: #232831; 
+    color: teal;
+    border: 4px solid teal; 
+    display: block;
+    padding: 10px 50px;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 2s; 
+}
+
+.card2>.btns button:hover{
+    border: 4px solid crimson;
+    color: crimson;
+}
+
+/* card3.html code */
+
+
+
+.card3{
+    background-color: #34E67E;
+}
+
+.card3>.cardPart1{
+    background-color: #1ABE9C;
+    width: 330px;
+    padding:40px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    position: relative;
+    top: 200px;
+}
+.card3>.cardPart1 .name{
+    font-size: 30px;
+    padding: 5px 20px;
+   
+}
+
+.card3>.cardPart2{
+    background-color: white;
+    height: 600px;
+    width: 380px;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: left;
+}
+.card3>.cardPart2>table{
+    margin-top: 65%;
+}
+.card3>.cardPart2>table tr td{
+    padding: 10px;
+    color:  #15A18C;
+    
+}
+
+.card3>.cardPart2>table tr td>p:first-child{
+    font-size: 20px;
+    font-weight: bold;
+}
+.card3>.cardPart2>table tr td>p:last-child{
+    font-size: 15px;
+}
+
+.card3>.cardPart3{
+    background-color: #1ABE9C;
+    width: 330px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    bottom: 100px;
+}
+
+.card3>.cardPart3>ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+}
+
+.card3>.cardPart3>ul>li>a img{
+    height: 50px;
+    margin-top: 20px;
+}
+
+
+

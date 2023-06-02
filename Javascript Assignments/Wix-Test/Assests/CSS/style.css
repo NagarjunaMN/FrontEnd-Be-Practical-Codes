@@ -1,0 +1,303 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Header CSS code */
+header{
+    background-color: rgb(11, 51, 76);
+    /* display: flex; */
+    height: 60px;
+    position: sticky;
+    top: 0px;
+}
+
+header>nav>ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: center;
+}
+
+header>nav>ul>li{
+    display: inline-block;
+    padding: 20px;
+}
+
+header>nav>ul>li>a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+header>nav>ul>li:first-child a{
+    font-size: 20px;
+    margin-right: 500px;
+}
+
+header>nav>ul>li:first-child a:hover{
+    color: #fff;
+}
+
+header>nav>ul>li:last-child a{
+    margin: 0px 15px;
+}
+
+.fa-user{
+    padding: 0px 10px;
+}
+
+header>nav>ul>li>a:hover{
+    color: lightblue;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20;
+}
+/* Banner CSS Code */
+.Banner{
+    justify-content: center;
+    align-items: flex-end;
+    height: 710px;
+}
+.Banner>section:first-child img{
+    position: absolute;
+    top: 0;
+    left: 0; 
+    
+    z-index: -1;
+    width: 100%;
+}
+
+.Banner>.bannerText{
+    height: 220px;
+    width: 750px;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px; 
+}
+.Banner>.bannerText>p{
+    margin: 20px;
+    font-size: 23px;
+}
+.Banner>.bannerText>h1{
+    font-size: 60px;
+    font-weight: normal;
+    color: rgb(11, 51, 76);
+}
+
+.Banner>.bannerText>button{
+    background-color: #fff;
+    color:  rgb(11, 51, 76);
+    font-weight: bold;
+    font-size:medium;
+    padding: 20px 35px;
+    margin: 30px; 
+    transition: 2s;
+}
+.Banner>.bannerText>button:hover{
+    background-color:rgb(11, 51, 76);
+    color:  #fff;
+}
+/* Cards CSS code */
+.cards{
+    height: 600px;
+    justify-content: space-around;
+}
+.cards>.item{
+    width: 18.33%;
+    text-align:center;
+    line-height: 2;
+    padding:40px 5px;
+    margin: 40px 5px;
+}
+
+.cards>.item>h3{
+    font-size: 35px;
+    font-weight: normal;
+    padding: 20px;
+    color: rgb(11, 51, 76);;
+}
+.cards>.item>p{
+    font-size: 15px;
+    color: grey;
+}
+
+.cards>.item>button{
+    background-color: rgb(11, 51, 76);;
+    color: #fff;
+    font-weight: bold;
+    font-size:medium;
+    padding: 18px 45px;
+    margin: 30px; 
+    transition: 1s;
+}
+
+.cards>.item>button:hover{
+    background-color: #fff;
+    color:  rgb(11, 51, 76);
+}
+
+/* About us code */
+
+.Aboutus{
+    background-color: lightblue;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 730px;
+}
+.Aboutus>img{
+    width: 100%;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+    
+}
+.Aboutus>.AboutText{
+    text-align: center;
+    line-height: 2;
+    width: 700px;
+    padding: 80px;
+    margin: 40px;
+}
+.Aboutus>.AboutText>h1{
+    font-size: 35px;
+    font-weight: normal;
+    color:rgb(11, 51, 76); 
+    padding: 10px;
+}
+.Aboutus>.AboutText>p{
+    padding: 10px;
+}
+.Aboutus>.AboutText>button{
+    background-color: lightblue;
+    color: rgb(11, 51, 76); 
+    padding: 20px 45px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 1s;
+}
+.Aboutus>.AboutText>button:hover{
+    background-color: rgb(11, 51, 76);
+    color:#fff ; 
+}
+
+/* Clients code */
+
+.clients{
+    justify-content: space-around;
+    margin: 50px;
+    padding: 50px;
+    
+    
+}
+.clients>h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: normal;
+    padding: 50px;
+    
+}
+.clients>.container>.item{
+    width: 25%;
+    text-align:center;
+    font-size: 40px;
+    color: grey;
+    padding: 50px 0px;
+}
+
+/* contact us code */
+.contacts{
+    background-color:rgb(11, 51, 76);
+    color:  #fff;
+    
+}
+.contact{
+    justify-content: center;
+    align-items: center;
+}
+.contacts>h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: normal;
+    padding: 50px;
+}
+.contacts>.container>.item{
+    width: 38%;
+    text-align:center;
+    margin: 20px; 
+}
+.contacts>.container>.item>p{
+    text-align: left;
+    padding: 10px;
+}
+.contacts>.container>.item>input{
+    background-color:rgb(11, 51, 76);
+    border-color: transparent transparent white transparent;
+    width: 100%;
+}
+
+.contacts>.container>.item>button{
+    color: rgb(11, 51, 76); 
+    padding: 20px 65px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 1s;
+    
+}
+
+.contacts>.container>.item>button:hover{
+    background-color: rgb(11, 51, 76);
+    color:#fff ; 
+}
+.contact>iframe{
+    margin: 90px;
+    width: 75%;
+    text-align: center;
+}
+/* footer code */
+
+footer{
+    background-color: #072136;
+    color: #fff;
+    height: 300px;
+}
+footer>.container{
+    justify-content: space-around;
+    align-items: center;
+    line-height: 1.5;
+    margin: 20px;
+}
+footer>.container>.item{
+    width: 16.33%;
+}
+footer>.container>.item>h1{
+    font-weight: normal;
+    font-size: 20px;
+    margin: 20px 0px;   
+}
+footer>.container>.item>p{
+    font-size: 15px;
+}
+footer>.container>.item>ul>li{
+    list-style: none;
+}
+footer>.container>.item>ul>li>a{
+    text-decoration: none;
+    color: #fff;
+}
+footer>.container>.item>ul>li>a:hover{
+    color: lightblue;
+}
+
+footer>.container>.item>.icons{
+    margin-bottom: 50px;
+}

@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+.align-content-center{
+    align-content: center;
+}
+.column-wrap{
+    flex-flow: column wrap;
+}
+
+/* Header navigation bar */
+header{
+    background:yellowgreen;
+    padding-right: 20px;
+}
+
+header>nav>ul{
+    list-style-type: none;
+    justify-content: end;
+}
+
+header>nav>ul>li{
+    padding: 25px 15px;
+    transition: 1s;
+}
+
+header>nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 2s;
+}
+
+header>nav>ul>li:hover{
+    background-color: white;
+}
+header>nav>ul>li:hover a{
+    color: yellowgreen;;
+}
+
+/* Register page */
+body{
+    background: #799F0C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACBB78, #799F0C); 
+    background: linear-gradient(to right, #ACBB78, #799F0C); 
+
+}
+.register{
+    margin: 20px 500px;
+    padding-top: 30px;
+    text-align: center;
+    background-color: yellowgreen;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.register>h1{
+    font-size: 28px;
+}
+form{
+    margin-top: 20px;
+}
+form>.form-group>label{
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+}
+form>.form-group>input{
+    padding: 2px 10px;
+}
+form>.form-group>input:focus{
+    outline: none;
+    border: none;
+}
+form>.form-group>select{
+    padding: 3px 32px;
+}
+form>.form-group>button{
+    padding: 8px 32px;
+    font-size: 15px;
+    margin:40px 5px ;
+    border: none;
+}
+form>.form-group>button:first-child{
+    background-color: slateblue;
+    color: white;
+    transition: 1s;
+}
+form>.form-group>button:first-child:hover{
+    color: blue;
+    background-color: white;
+}
+form>.form-group>button:last-child{
+    background-color: orangered;
+    color: white;
+    transition: 1s;
+}
+form>.form-group>button:last-child:hover{
+    color: red;
+    background-color: white;
+}

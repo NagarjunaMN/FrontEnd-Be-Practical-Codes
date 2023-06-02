@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select boxes</title>
+    <style>
+        #centrr{
+            background-color: darkviolet;
+            padding: 20px;
+            margin: 20px;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+        select{
+            width: 350px;
+            height: 50px;
+            font-size: 25px;
+        }
+        #USA{
+            display: none;
+        }
+        #Japan{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <center id="centrr">
+        <select name="country" id="country">
+            <option value="" selected="selected">Choose a Country</option>
+        </select>
+        <select name="state" id="state" disabled="disabled">
+            <option value="" selected="selected">Select State</option>
+        </select>
+    </center>
+    <p id="txt"></p>
+    <!-- <script>
+
+            let country  = {"India": ["Karnataka","Andhra Pradesh","Kerala","Tamil Nadu"],
+                            "USA" :["Nevada","Texas","Florida","New York"] ,
+                            "Japan" : ["Hokkaido","Honshu","Okinava","Kanto"]
+                            }
+            window.onload = function () {
+                let countryVal = document.getElementById('country')
+                let stateVal = document.getElementById('state')
+
+                for (const contry in country) {
+                    countryVal.options[countryVal.options.length] = new Option(contry, contry)
+                }
+                countryVal.onchange = function (e) {
+                    stateVal.disabled = false;
+                    stateVal.length = 1;
+                 
+                    for (let state of country[countryVal.value]) {
+                        stateVal.options[stateVal.options.length] = new Option(
+                            state,
+                            state);
+                    }
+                }
+        }
+    </script> -->
+
+    <script>
+        let country = ["India","USA","Japan"]
+        let India = ["Karnataka","Andhra Pradesh","Kerala","Tamil Nadu"]
+        let USA = ["Nevada","Texas","Florida","New York"]
+        let Japan = ["Hokkaido","Honshu","Okinava","Kanto"]
+
+        let countryVal = document.getElementById('country')
+        let stateVal = document.getElementById('state')
+
+        for (let i = 0; i < country.length; i++) {
+            countryVal.options[countryVal.options.length] = new Option(country[i], country[i])    
+        }
+        countryVal.onchange = function () {
+            stateVal.disabled = false;
+            stateVal.length = 1;
+            console.log(countryVal.value)
+            if (countryVal.value == '') {
+                stateVal.disabled = true;
+            }
+            else if (countryVal.value == "India") {
+                for (let j = 0; j < India.length; j++) {
+                    stateVal.options[stateVal.options.length] = new Option(India[j], India[j])                
+                }
+            }else if(countryVal.value == "USA"){
+                for (let j = 0; j < USA.length; j++) {
+                    stateVal.options[stateVal.options.length] = new Option(USA[j], USA[j])                
+                }
+            }else if(countryVal.value == "Japan"){
+                for (let j = 0; j < Japan.length; j++) {
+                    stateVal.options[stateVal.options.length] = new Option(Japan[j], Japan[j])                
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

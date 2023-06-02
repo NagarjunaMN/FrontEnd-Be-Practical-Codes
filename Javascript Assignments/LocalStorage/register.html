@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+</head>
+<body>
+    <header>
+        <nav> 
+            <ul class="container">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="register">
+        <h1>Register</h1>
+        <form action="" class=" column-wrap container" id="myForm">
+            
+            <div class="form-group">
+                <label for="name">Enter Your Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Enter Your Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Enter Your Mobile</label>
+                <input type="text" name="mobile" id="mobile" required maxlength="10">
+            </div>
+            <div class="form-group">
+                <label for="name">Your Role</label>
+                <select name="role" id="role">
+                    <option value="null">Select Your Role</option>
+                    <option value="student">Student</option>
+                    <option value="admin">Admin</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="password">Enter Your password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="form-group">
+                <label>Already Registered? </label>
+                <a href="login.html">Log-in</a> to your Account
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        let name = document.getElementById("name")
+        let email = document.getElementById("email")
+        let mobile = document.getElementById("mobile")
+        let role = document.getElementById("role")
+        let password = document.getElementById("password")
+        let myForm = document.getElementById("myForm")
+
+        function createId() {
+            return Math.round(Math.random() * 1000)
+        }
+        
+        let userData = JSON.parse(localStorage.getItem("user")) || []
+
+        myForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            if(name.value != "" && email.value != "" && mobile.value != "" && password.value != ""){
+                if(role.value != "null"){
+                    var data =  {
+                        id : createId(),
+                        name : name.value,
+                        email : email.value,
+                        mobile : mobile.value,
+                        role : role.value,
+                        password : password.value
+                    }
+                    createUser(data)
+                }else{
+                    alert("Select a role in dropdown box")
+                }
+            }else{
+                alert("Enter all the Values")
+            }
+        })
+
+
+        function createUser(data) { 
+                extEmail = userData.find((item) => item.email === email.value)
+                extMobile = userData.find((item) => item.mobile === mobile.value)
+                console.log(extEmail)
+                if(extEmail || extMobile){
+                    alert("Email Id or Mobile number Already exists")
+                }else{
+                    userData.push(data)
+                    saveData(userData)
+                    alert("New User Created Successfully")
+                    location.href = "login.html"
+                }
+            
+        }
+
+        function saveData(data) {
+            window.localStorage.setItem("user",JSON.stringify(data))
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+    <style>
+        .register{
+            padding-bottom: 30px;
+            gap: 20px;
+        }
+        #output>h1{
+            padding-bottom: 20px;
+        }
+        .register>button{
+            margin: auto 215px;
+            background-color: orangered;
+            color: white;
+            border: none;
+            padding : 8px 0px;
+            transition: 1s;
+        }
+        .register>button:hover{
+            color: orangered;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav> 
+            <ul class="container">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html" id="log">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="register container column-wrap">
+        <h1>Welcome to the Home page</h1>
+        <div id="output"></div>
+        <button onclick="logout()">Logout</button>
+    </section>
+
+    <script>
+        
+            let isLoggedIn = JSON.parse(localStorage.getItem("LoggedUser"))
+            if(isLoggedIn){
+                let h1 = document.createElement("h1");
+                h1.innerHTML = `Hello ${isLoggedIn.name}`
+                h1.style.color = "slateblue"
+                let h3 = document.createElement("h3");
+                h3.innerHTML = `You are a ${isLoggedIn.role}`
+
+                document.getElementById("output").appendChild(h1)
+                document.getElementById("output").appendChild(h3)
+                document.getElementById("log").innerHTML = "Logout"
+                document.getElementById("log").onclick = logout 
+                document.getElementById("log").href = "login.html"
+                // document.getElementById("log").addEventListener("click",logout)
+            }else{
+                alert("You are not logged in")
+                location.href = "login.html"
+            }
+        
+        function logout() {
+            if(confirm("Are you sure you want to logout")){
+                localStorage.removeItem("LoggedUser")
+                location.href = "login.html"
+            }
+        }
+       
+    </script>
+
+
+</body>
+</html>

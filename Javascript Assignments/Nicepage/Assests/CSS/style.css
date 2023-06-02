@@ -1,0 +1,236 @@
+/* common code */
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+}
+
+.justify-content-space-between{
+    justify-content: space-between;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.justify-content-left{
+    justify-content: left;
+}
+
+.justify-content-center{
+    justify-content:center;
+}
+.justify-content-right{
+    justify-content:right;
+}
+.align-content-space-between{
+    align-content: space-between;
+}
+
+:root{
+    --font-color:#fff;
+    --btn-color: rgb(0, 0, 0);
+    --bg-color:#38D2D9;
+}
+
+.smalltitle{font-size: 30px;}
+.headTitle{font-size: 36px;}
+
+/* Header CSS code */
+header>nav{
+    margin: 20px 50px;
+    padding: 0px 50px;
+}
+
+/* banner */
+.banner{
+    background: url(../Images/banner.jpg) no-repeat center;
+    background-size: 100%;
+    /* height: 550px;   */
+}
+.banner>div{
+    background-color: var(--font-color);
+    padding: 30px 0px;
+    text-align: left;
+    height: 100%; 
+    width: 50%;
+}
+.banner>div>h1, .banner>div>p, .banner>div>button, .about>div>h1, .about>div>p, .about>div>button, .services>div>h1, .services>div>p{
+    margin: 20px 180px;
+}
+.banner>div>h1{font-size: 60px;}
+.banner>div>p{font-size: 20px; font-style: italic;}
+.banner>div>p>a{color: var(--bg-color); font-style: normal;}
+.banner>div>button{
+    padding: 15px 30px;
+    background-color: var(--btn-color);
+    transition: 1s;
+    color: var(--font-color);
+    font-size: 18px;
+    border-radius: 25px;
+}
+.banner>div>button:hover, .business>div>button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* CARDS */
+.card{gap: 0px;}
+.card>.item{
+    flex: 1;
+    padding: 100px 50px;
+    line-height: 2;
+    text-align: center;
+    color: var(--font-color);
+    
+}
+.card>.item:first-child{
+    background-color: rgb(0, 0, 0);
+}
+.card>.item:nth-child(2){
+    background-color: var(--bg-color);
+}
+.card>.item:last-child{
+    background-color: #14B8BF;
+}
+
+/* About company */
+.about,.services{
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+}
+.about>.item{
+    width: 78%;
+    line-height: 1.7;
+}
+.about>div>button, .services>button{
+    padding: 15px 30px;
+    background-color: transparent;
+    font-size: 15px;
+    border-color: grey;
+    transition: 1s;
+}
+.about>div>button:hover, .services>button:hover{
+    background-color: black;
+    color: white;
+
+}
+/* ABOUT IMAGE */
+.aboutimg{
+    background: url(../Images/bannerleft.jpg) no-repeat center;
+    background-size: 100%;
+    height: 100%;
+}
+
+
+.aboutimg>div>h1, .aboutimg>div>p, .aboutimg>div>button, .serviceimg>div>h1, .serviceimg>div>p, .serviceimg>div>button{
+    margin: 20px 100px;
+}
+.aboutimg>div, .serviceimg>div{padding: 100px 0px;}
+.aboutimg>div, .serviceimg>div{
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    color: var(--font-color);
+    text-align: left;
+    height: 100%; 
+    width: 50%;
+}
+.aboutimg>div>button,.serviceimg>div>button,.serviceCard>div>button{
+    padding: 15px 30px;
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    font-size: 15px;
+    transition: 1s;
+    border: none;
+    border-radius: 25px;
+}
+.aboutimg>div>button:hover,.serviceCard>div>button:hover{
+    background-color: #7CBBCA;
+    color: var(--font-color);
+}
+
+/* Services */
+
+
+.services>div>.item{
+    margin: 40px 0px;
+    line-height: 2;
+    text-align: center;
+    width: 25.33% !important;   
+}
+.fa-brands{
+    color: var(--bg-color) !important;
+}
+.services>div>.item>h4,.services>div>.item>p, .serviceCard>div>h1,.serviceCard>div>p, .business>div>h1 ,.business>div>p{
+    padding: 10px;
+}
+/* Service image */
+.serviceimg{
+    background: url(../Images/aboutus.webp) no-repeat center;
+    background-size: 100%;
+}
+
+.serviceimg>div{
+       background-color: #F2F2F2;        
+        color: black;
+}
+.serviceimg>div>button{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+.serviceimg>div>button:hover{
+    background-color: black;
+    color: var(--font-color);
+}
+
+/* Service card */
+.serviceCard{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    height: 190px;
+}
+.serviceCard>div:first-child{
+    /* width: 45%; */
+    flex: 4;
+    padding-right: 30px;
+}
+.serviceCard>div:last-child{
+    /* width: 45%; */
+    flex: 1;
+    /* padding-right: 30px; */
+}
+
+/* business and marketing */
+
+.business{
+    text-align: center;
+    margin: 40px 0px;
+    line-height: 2;
+    height: 500px;
+    
+}
+.business>.item:first-child{
+    width: 100%;
+}
+.business>div>button{
+    padding: 13px 40px;
+    background-color: rgb(0, 0, 0);
+    font-size: 15px;
+    color: var(--font-color);
+    transition: 1s;
+}
+
+/* footer */
+
+footer{
+    height: 150px;
+    background-color: black;
+    color: var(--font-color);
+}

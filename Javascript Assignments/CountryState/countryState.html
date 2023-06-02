@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select boxes</title>
+    <style>
+        #centrr{
+            background-color: darkviolet;
+            padding: 20px;
+            margin: 20px;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+        }
+        select{
+            width: 350px;
+            height: 50px;
+            font-size: 25px;
+        }
+        #USA{
+            display: none;
+        }
+        #Japan{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <center id="centrr">
+        <select name="country" id="country" onchange="showCountry()">
+            <option value="" selected="selected">Choose a Country</option>
+        </select>
+        <select name="state" id="state" disabled="disabled" onchange="showState()">
+            <option value="" selected="selected">Choose a State</option>
+        </select>
+    </center>
+    <p id="countryTxt"></p>
+    <p id="stateTxt"></p>
+    <script>
+            // let country = ["India", "USA", "Japan"]
+            let countryState  = {"India": ["Karnataka","Andhra Pradesh","Kerala","Tamil Nadu"],
+                                 "USA" :["Nevada","Texas","Florida","New York"] ,
+                                 "Japan" : ["Hokkaido","Honshu","Okinava","Kanto"]
+                                }
+            let country = Object.keys(countryState)
+           
+            let countryVal = document.getElementById('country')
+            let stateVal = document.getElementById('state')
+
+            for (let i = 0; i < country.length; i++) {
+                countryVal.options[countryVal.options.length] = new Option(country[i])
+                // countryVal.options[countryVal.options.length] = new Option(country[i], country[i])
+            } 
+            
+            function showCountry() {
+                document.getElementById('stateTxt').innerText = ""
+                if (countryVal.value == '') {
+                    stateVal.disabled = true;
+                    
+                    document.getElementById('countryTxt').innerText = "Select a Country"
+                    document.getElementById('countryTxt').style.color = "red"
+                }else{
+                    stateVal.disabled = false;
+                    document.getElementById('countryTxt').innerText = `You have selected ${countryVal.value} Country`
+                    document.getElementById('countryTxt').style.color = "green"
+
+                    stateVal.length = 1;
+                    let states = countryState[countryVal.value];
+
+                    for (let i = 0; i < states.length; i++) {
+                        stateVal.options[stateVal.options.length] = new Option(states[i])   }
+                    // stateVal.options[stateVal.options.length] = new Option(states[i], states[i])   }
+                    }
+            }
+            
+            function showState() {
+                if (stateVal.value == '') {
+                    document.getElementById('stateTxt').innerText = "Select a State"
+                    document.getElementById('stateTxt').style.color = "red"
+                }else{
+                    document.getElementById('stateTxt').innerText = `You have selected ${stateVal.value} State`
+                    document.getElementById('stateTxt').style.color = "green"
+                }
+            }
+    </script>
+
+</body>
+</html>

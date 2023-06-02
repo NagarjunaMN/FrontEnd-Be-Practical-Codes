@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+            margin: 10px;
+        }
+        form{
+            background-color: coral;
+            color: white;
+            font-size: 20px;
+        }
+        form>button{
+            font-size: 20px;
+            padding: 5px 15px;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="#">
+        <h2>Student Registration</h2>
+
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName">
+
+        <label for="dob">Date of birth</label>
+        <input type="date" name="dob" id="dob">
+
+        <label for="gender"></label>
+        <input type="radio" name="gender" id="Male"> Male
+        <input type="radio" name="gender" id="female"> Female
+
+        <label for="address"></label>
+        <textarea name="address" id="" cols="30" rows="10"></textarea>
+
+        <label for="city">City</label>
+        <input type="text" name="city" id="city">
+
+        <label for="pincode">pincode</label>
+        <input type="number" name="pincode" id="pincode">
+
+        <label for="city">Country</label>
+        <input type="text" name="Country" id="Country">
+
+        <label for="hobbies">Hobbies</label>
+        <input type="checkbox" name="hobbies" id="drawing">Drawing
+        <input type="checkbox" name="hobbies" id="music">Listening to music
+        <input type="checkbox" name="hobbies" id="books">Reading Books
+
+        <label for="qualification"></label>
+        <table>
+            <tr>
+                <th>Sl.No</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>class X</td>
+                <td><input type="text" name="board" id=""></td>
+                <td><input type="text" name="percentage" id=""></td>
+                <td><input type="text" name="yop" id=""></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>class XII</td>
+                <td><input type="text" name="board" id=""></td>
+                <td><input type="text" name="percentage" id=""></td>
+                <td><input type="text" name="yop" id=""></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Graduation</td>
+                <td><input type="text" name="board" id=""></td>
+                <td><input type="text" name="percentage" id=""></td>
+                <td><input type="text" name="yop" id=""></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Masters</td>
+                <td><input type="text" name="board" id=""></td> 
+                <td><input type="text" name="percentage" id=""></td>
+                <td><input type="text" name="yop" id=""></td>
+            </tr>
+        </table>
+
+        <label for="">Courses applied for</label>
+        <input type="radio" name="course" id="bcom"> B.Com
+        <input type="radio" name="course" id="ba"> B.A
+
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+
+    </form>
+</body>
+</html>
